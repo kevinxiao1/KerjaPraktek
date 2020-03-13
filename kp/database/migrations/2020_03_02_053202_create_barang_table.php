@@ -17,6 +17,7 @@ class CreateBarangTable extends Migration
             $table->bigIncrements('id_barang');
             $table->string('nama_barang');
             $table->string('harga');
+            $table->string('deskripsi');
             $table->string('id_kategori');
             $table->string('id_subkategori');
             $table->timestamps();

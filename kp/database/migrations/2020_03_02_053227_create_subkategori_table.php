@@ -14,7 +14,7 @@ class CreateSubkategoriTable extends Migration
     public function up()
     {
         Schema::create('subkategori', function (Blueprint $table) {
-            $table->bigIncrements('id_subkategori');
+            $table->string('id_subkategori');
             $table->string('nama_subkategori');
             $table->timestamps();
         });
