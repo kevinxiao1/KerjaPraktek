@@ -107,12 +107,62 @@ class DatabaseSeeder extends Seeder
     );
       DB::table('barang')->insert(
         [
-          'id_barang' => 'LZPM-5114 Kompresor 1/4 hp Auto+Motor',
+        [
+          'id_barang' => 'AC-PSL-001',
           'nama_barang' => 'LZPM-5114 Kompresor 1/4 hp Auto+Motor',
           'harga' => 'LZPM-5114 Kompresor 1/4 hp Auto+Motor',
-          'deskripso' => 'LZPM-5114 Kompresor 1/4 hp Auto+Motor',
+          'deskripsi' => 'LZPM-5114 Kompresor 1/4 hp Auto+Motor',
           'id_kategori' => 'AC',
-          'id_subkategori' => 'Screw Open',
+          'id_subkategori' => 'PSL',
+        ],
+        [
+          'id_barang' => 'AC-PSL-002',
+          'nama_barang' => 'LVPM-5112 Kompresor 1/2 hp Auto+Motor',
+          'harga' => 'LZPM-5114 Kompresor 1/4 hp Auto+Motor',
+          'deskripsi' => 'LVPM-5112 Kompresor 1/2 hp Auto+Motor',
+          'id_kategori' => 'AC',
+          'id_subkategori' => 'PSL',
+        ],
+        [
+          'id_barang' => 'AC-PSL-003',
+          'nama_barang' => 'LVPM-6501 Kompresor 1 hp Auto+Motor',
+          'harga' => 'LZPM-5114 Kompresor 1/4 hp Auto+Motor',
+          'deskripsi' => 'LVPM-6501 Kompresor 1 hp Auto+Motor',
+          'id_kategori' => 'AC',
+          'id_subkategori' => 'PSL',
+        ],
+        [
+          'id_barang' => 'AC-PSL-004',
+          'nama_barang' => 'LWPM-6502 Kompresor 2 hp Auto+Motor',
+          'harga' => 'LZPM-5114 Kompresor 1/4 hp Auto+Motor',
+          'deskripsi' => 'LWPM-6502 Kompresor 2 hp Auto+Motor',
+          'id_kategori' => 'AC',
+          'id_subkategori' => 'PSL',
+        ],
+        [
+          'id_barang' => 'AC-PSL-005',
+          'nama_barang' => 'LVPM-8003 Kompresor 3 hp Auto+Motor',
+          'harga' => 'LZPM-5114 Kompresor 1/4 hp Auto+Motor',
+          'deskripsi' => 'LVPM-8003 Kompresor 3 hp Auto+Motor',
+          'id_kategori' => 'AC',
+          'id_subkategori' => 'PSL',
+        ],
+        [
+          'id_barang' => 'AC-PSL-006',
+          'nama_barang' => 'LWPM-8005 Kompresor 5 hp Auto+Motor          ',
+          'harga' => 'LZPM-5114 Kompresor 1/4 hp Auto+Motor',
+          'deskripsi' => 'LWPM-8005 Kompresor 5 hp Auto+Motor',
+          'id_kategori' => 'AC',
+          'id_subkategori' => 'PSL',
+        ],
+        [
+          'id_barang' => 'AC-PSL-007',
+          'nama_barang' => 'LWPM-8005 Kompresor 5 hp Auto+Motor          ',
+          'harga' => 'LZPM-5114 Kompresor 1/4 hp Auto+Motor',
+          'deskripsi' => 'LWPM-8005 Kompresor 5 hp Auto+Motor',
+          'id_kategori' => 'AC',
+          'id_subkategori' => 'PSL',
+        ],
         ]
     );
     }
