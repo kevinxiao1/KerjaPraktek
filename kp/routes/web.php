@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('Content.SiteContent.Site');
-});
+Route::get('/','SiteController@Home')->name('Home');
+Route::get('/products','SiteController@Products')->name('Products');
