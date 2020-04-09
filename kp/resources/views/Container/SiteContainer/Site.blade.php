@@ -24,6 +24,15 @@
     <link rel="stylesheet" href="{{asset('Site/css/slick.css')}}">
     <!-- style CSS -->
     <link rel="stylesheet" href="{{asset('Site/css/style.css')}}">
+    <style>
+        .fix {
+            /* overflow: hidden; */
+            background-color: #ffffff;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -32,7 +41,8 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-12">
-                    <nav class="navbar navbar-expand-lg navbar-light">
+                    
+                    <nav class="navbar navbar-expand-lg navbar-light ">
                         <a class="navbar-brand" href="index.html"> <img src="img/logo.png" alt="logo"> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -43,50 +53,26 @@
                         <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="index.html">Home</a>
+                                    <a class="nav-link" href="{{url('/#home')}}">Home</a>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_1"
-                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Shop
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                                        <a class="dropdown-item" href="category.html"> shop category</a>
-                                        <a class="dropdown-item" href="single-product.html">product details</a>
-
-                                    </div>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_3"
-                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        pages
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-                                        <a class="dropdown-item" href="login.html"> login</a>
-                                        <a class="dropdown-item" href="tracking.html">tracking</a>
-                                        <a class="dropdown-item" href="checkout.html">product checkout</a>
-                                        <a class="dropdown-item" href="cart.html">shopping cart</a>
-                                        <a class="dropdown-item" href="confirmation.html">confirmation</a>
-                                        <a class="dropdown-item" href="elements.html">elements</a>
-                                    </div>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_2"
-                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        blog
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-                                        <a class="dropdown-item" href="blog.html"> blog</a>
-                                        <a class="dropdown-item" href="single-blog.html">Single blog</a>
-                                    </div>
-                                </li>
-
                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Contact</a>
+                                    <a class="nav-link" href="{{url('/#category')}}">Featured Category</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{url('/#product')}}">Our Product</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{url('/#bestSeller')}}">Best Seller</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{url('/#client')}}">Our Client</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{url('/#contact')}}">Contact Us</a>
                                 </li>
                             </ul>
                         </div>
-                        <div class="hearer_icon d-flex">
+                        {{-- <div class="hearer_icon d-flex">
                             <a id="search_1" href="javascript:void(0)"><i class="ti-search"></i></a>
                             <a href=""><i class="ti-heart"></i></a>
                             <div class="dropdown cart">
@@ -101,12 +87,12 @@
                                 </div> -->
 
                             </div>
-                        </div>
+                        </div> --}}
                     </nav>
                 </div>
             </div>
         </div>
-        <div class="search_input" id="search_input_box">
+        {{-- <div class="search_input" id="search_input_box">
             <div class="container ">
                 <form class="d-flex justify-content-between search-inner">
                     <input type="text" class="form-control" id="search_input" placeholder="Search Here">
@@ -114,15 +100,15 @@
                     <span class="ti-close" id="close_search" title="Close Search"></span>
                 </form>
             </div>
-        </div>
+        </div> --}}
     </header>
     <!-- Header part end-->
 
-@yield('content')
+    @yield('content')
 
     <!--::footer_part start::-->
     <footer class="footer_part">
-        <div class="container">
+        {{-- <div class="container">
             <div class="row justify-content-around">
                 <div class="col-sm-6 col-lg-2">
                     <div class="single_footer_part">
@@ -189,7 +175,7 @@
                 </div>
             </div>
 
-        </div>
+        </div> --}}
         <div class="copyright_part">
             <div class="container">
                 <div class="row">
