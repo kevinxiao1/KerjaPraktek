@@ -16,6 +16,8 @@ class CreateSubkategoriTable extends Migration
         Schema::create('subkategori', function (Blueprint $table) {
             $table->string('id_subkategori');
             $table->string('nama_subkategori');
+            $table->tinyInteger('status_subkategori',0)->default('1')->unsigned();  
+
             $table->timestamps();
         });
     }

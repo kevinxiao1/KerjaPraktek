@@ -16,10 +16,11 @@ class CreateBarangTable extends Migration
         Schema::create('barang', function (Blueprint $table) {
             $table->string('id_barang');
             $table->string('nama_barang');
-            $table->string('harga');
-            $table->string('deskripsi');
+            $table->string('harga_barang');
+            $table->text('deskripsi_barang');
             $table->string('id_kategori');
             $table->string('id_subkategori');
+            $table->tinyInteger('status_barang',0)->default('1')->unsigned();  
         });
     }
 

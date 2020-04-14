@@ -13,3 +13,9 @@
 
 Route::get('/','SiteController@Home')->name('Home');
 Route::get('/products','SiteController@Products')->name('Products');
+
+Route::group(['prefix'=>'admin'], function() {
+    Route::get('/dashboard','adminController@dashboard')->name('dashboard');
+    Route::get('/viewBarang','adminController@viewBarang')->name('viewBarang');
+    Route::get('/viewKategori','adminController@viewKategori')->name('viewKategori');
+});

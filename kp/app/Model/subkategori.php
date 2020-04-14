@@ -1,13 +1,13 @@
 <?php
 
-namespace App;
+namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
 class subkategori extends Model
 {
     protected $table = 'subkategori';
-    
+    public $incrementing = false;
     protected $primaryKey = 'id_subkategori';
 
     public function Subkategori()
