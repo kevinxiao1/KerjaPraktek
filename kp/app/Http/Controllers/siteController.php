@@ -15,4 +15,16 @@ class siteController extends Controller
     {
         return view('Content.SiteContent.Products');
     }
+
+    public function Login()
+    {
+        return view('Content.SiteContent.Login');
+    }
+
+    public function doLogin(Request $request)
+    {
+        if ($request->username =="admin" && $request->password =="admin") {
+            return  redirect('/admin/dashboard');
+        }
+    }
 }
