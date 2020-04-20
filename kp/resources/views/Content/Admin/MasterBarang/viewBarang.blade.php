@@ -46,11 +46,20 @@
                         {{-- </form> --}}
                     </td>
                     <td>
-                        {{-- <form method="get" action="{{route('UpdateBarang')}}"> --}}
-                            {{-- @csrf --}}
-                            <input type="hidden" name="key" value="{{$item['id_barang']}}" />
-                            <button type="submit" class="btn btn-block btn-danger">Hapus</button>
-                        {{-- </form> --}}
+                        @if ($item['status_barang'] == 1)
+                            <form method="get" action="{{route('deleteBarang')}}">
+                                @csrf
+                                <input type="hidden" name="key" value="{{$item['id_barang']}}" />
+                                <button type="submit" class="btn btn-block btn-danger">Non-Aktfikan</button>
+                            </form>
+                        @else
+                            <form method="get" action="{{route('unDeleteBarang')}}">
+                                @csrf
+                                <input type="hidden" name="key" value="{{$item['id_barang']}}" />
+                                <button type="submit" class="btn btn-block btn-success">Aktifkan</button>
+                            </form>
+                        @endif
+                        
                     </td>
                 </tr>
                 @endforeach

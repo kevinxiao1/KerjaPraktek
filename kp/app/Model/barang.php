@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class barang extends Model
 {
     protected $table = 'barang';
-    
+    public $timestamps = false;
     protected $primaryKey = 'id_barang';
     public $incrementing = false;
     public function Kategori()

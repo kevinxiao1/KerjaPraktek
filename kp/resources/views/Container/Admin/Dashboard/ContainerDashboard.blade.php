@@ -111,7 +111,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/charts/flot.html" class="nav-link">
+                                    <a href="/admin/createKategori" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Tambah Kategori Baru</p>
                                     </a>
@@ -129,13 +129,13 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="pages/charts/chartjs.html" class="nav-link">
+                                    <a href="/admin/viewSubKategori" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Lihat List Sub Kategori</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/charts/flot.html" class="nav-link">
+                                    <a href="/admin/createSubKategori" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Tambah Sub Kategori Baru</p>
                                     </a>
@@ -192,7 +192,32 @@
                 </div><!-- /.container-fluid -->
             </div>
             <!-- /.content-header -->
+            @if(isset($errors))
 
+            @foreach ($errors->all() as $message)
+            <div class="collection alert alert-warning alert-dismissable">
+                <button class="close" type="button" data-dismiss="alert" aria-hidden="true">x</button>
+                <h5>
+                    <i class="icon fas fa-exclamation-triangle"></i>
+                    Peringatan!
+                </h5>
+                {{-- <li class="collection-item red-text text-darken-3">{{ $message }}</li> --}}
+                {{$message}}
+            </div>
+
+            @endforeach
+            @endif
+            @if(session('messages'))
+            <div class="collection alert alert-info alert-dismissable">
+                <button class="close" type="button" data-dismiss="alert" aria-hidden="true">x</button>
+                <h5>
+                    <i class="icon fas fa-info"></i>
+                    Info
+                </h5>
+                {{-- <li class="collection-item green-text text-darken-3">{{ session('messages') }}</li> --}}
+                {{ session('messages') }}
+            </div>
+            @endif
             <!-- Main content -->
             @yield('content')
             <!-- /.content -->
@@ -230,20 +255,21 @@
     <script src="{{asset('Admin/plugins/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
     <script>
         $(function () {
-          $("#example1").DataTable({
-            "responsive": true,
-            "autoWidth": false,
-          });
-          $('#example2').DataTable({
-            "paging": true,
-            "lengthChange": false,
-            "searching": false,
-            "ordering": true,
-            "info": true,
-            "autoWidth": false,
-            "responsive": true,
-          });
+            $("#example1").DataTable({
+                "responsive": true,
+                "autoWidth": false,
+            });
+            $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
         });
+
     </script>
     <!-- Bootstrap 4 -->
     <script src="{{asset('Admin/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>

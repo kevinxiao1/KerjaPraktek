@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Model\barang;
 use App\Model\kategori;
+use App\Model\subkategori;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -27,6 +28,16 @@ class AdminController extends Controller
         return view('Content.Admin.MasterKategori.viewKategori',
             [
                 'daftarKategori' => $daftarKategori,
+            ]
+        );
+    }
+
+    public function viewSubKategori(Request $request)
+    {
+        $daftarSubKategori = subkategori::all();
+        return view('Content.Admin.MasterSubKategori.viewSubKategori',
+            [
+                'daftarSubKategori' => $daftarSubKategori,
             ]
         );
     }
