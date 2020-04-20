@@ -3,18 +3,47 @@
 namespace App\Http\Controllers;
 
 use App\Model\barang;
+use App\Model\kategori;
+use App\Model\subkategori;
 use Illuminate\Http\Request;
 
 class BarangController extends Controller
 {
-    public function insertBarang(Request $request)
+    public function createBarang(Request $request)
     {
-        # code...
+        $daftarKategori = kategori::all();
+        $daftarSubKategori = subkategori::all();
+        return view('Content.Admin.MasterBarang.createBarang',
+        [
+            'daftarKategori' => $daftarKategori,
+            'daftarSubKategori' => $daftarSubKategori,
+        ]);
     }
 
-    public function doInsertBarang(Request $request)
+    public function doCreateBarang(Request $request)
     {
-        # code...
+        $this->validate($request, [
+            'idBarang' => 'required',
+            'namaBarang' => 'required',
+            'hargaBarang' => 'required',
+            'deskripsiBarang' => 'required',
+        ]);
+        // $request->file('gambarBarang')->store('Gambar');
+        $request->gambarBarang->storeAs('Gambar', $request->gambarBarang->getClientOriginalName());
+        $barang = new barang();
+        $barang->id_barang = $request->idBarang;
+        $barang->nama_barang = $request->namaBarang;
+        $barang->harga_barang = $request->hargaBarang;
+        $barang->deskripsi_barang = $request->deskripsiBarang;
+        $barang->gambar_barang = $request->gambarBarang->getClientOriginalName();
+        $barang->id_kategori = $request->kategori;
+        $barang->id_subkategori = $request->subKategori;
+        if ($barang->save()) {
+            return redirect()->route('viewBarang')->with('messages','Kategori berhasil ditambah');
+        }
+        else{
+        }
+        
     }
 
     public function deleteBarang(Request $request)

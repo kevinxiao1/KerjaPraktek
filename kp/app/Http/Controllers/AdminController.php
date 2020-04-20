@@ -6,6 +6,7 @@ use App\Model\barang;
 use App\Model\kategori;
 use App\Model\subkategori;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {

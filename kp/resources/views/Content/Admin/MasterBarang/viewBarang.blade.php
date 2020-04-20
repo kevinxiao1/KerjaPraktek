@@ -10,6 +10,7 @@
             <thead>
                 <tr>
                     <th>No. </th>
+                    <th>Gambar Barang</th>
                     <th>Id Barang</th>
                     <th>Nama Barang</th>
                     <th>Harga Barang</th>
@@ -25,6 +26,7 @@
                 @foreach ($daftarBarang as $item)
                 <tr>
                     <td>{{$loop->index+1}}</td>
+                    <td><img src="{{ asset('storage/Gambar/').'/'.$item['gambar_barang'] }}" style="width: 150px" alt=""></td>
                     <td>{{$item['id_barang']}}</td>
                     <td>{{$item['nama_barang']}}</td>
                     <td>{{$item['harga_barang']}}</td>

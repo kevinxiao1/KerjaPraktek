@@ -87,7 +87,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/charts/flot.html" class="nav-link">
+                                    <a href="/admin/createBarang" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Tambah Barang Baru</p>
                                     </a>
@@ -247,6 +247,24 @@
     <script>
         $.widget.bridge('uibutton', $.ui.button)
 
+    </script>
+    {{-- CKEDITOR --}}
+    <script src="{{asset('ckeditor/ckeditor.js')}}"></script>
+    <script>
+        var konten = document.getElementById("deskripsiBarang");
+            CKEDITOR.replace(konten,{
+            language:'en-gb'
+        });
+        CKEDITOR.config.allowedContent = true;
+    </script>
+    {{-- /CKEDITOR --}}
+    {{-- file Input --}}
+    <!-- bs-custom-file-input -->
+    <script src="{{asset('Admin/plugins/bs-custom-file-input/bs-custom-file-input.min.js')}}"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+          bsCustomFileInput.init();
+        });
     </script>
     <!-- DataTables -->
     <script src="{{asset('Admin/plugins/datatables/jquery.dataTables.min.js')}}"></script>
