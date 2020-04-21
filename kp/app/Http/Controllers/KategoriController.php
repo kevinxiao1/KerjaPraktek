@@ -31,10 +31,7 @@ class KategoriController extends Controller
 
     public function updateKategori(Request $request)
     {
-        $this->validate($request, [
-            'idKategori' => 'required',
-            'namaKategori' => 'required',
-        ]);
+        
         $daftarKategori = kategori::find($request->key);
         return view('Content.Admin.MasterKategori.updateKategori',
             [
@@ -45,6 +42,10 @@ class KategoriController extends Controller
 
     public function doUpdateKategori(Request $request)
     {
+        $this->validate($request, [
+            'idKategori' => 'required',
+            'namaKategori' => 'required',
+        ]);
         $newKategori = kategori::find($request->key);
         $newKategori->id_kategori = $request->idKategori;
         $newKategori->nama_kategori=$request->namaKategori;
