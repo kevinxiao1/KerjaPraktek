@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Model\barang;
 use App\Model\kategori;
 use App\Model\subkategori;
+use Illuminate\Http\File;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class BarangController extends Controller
 {
@@ -29,7 +31,15 @@ class BarangController extends Controller
             'deskripsiBarang' => 'required',
         ]);
         // $request->file('gambarBarang')->store('Gambar');
-        $request->gambarBarang->storeAs('Gambar/'.$request->idBarang, $request->gambarBarang->getClientOriginalName());
+        // $request->gambarBarang->storeAs('Gambar/'.$request->idBarang, $request->gambarBarang->getClientOriginalName());
+        // Storage::disk('public')->put($request->gambarBarang->getClientOriginalName(), $request->gambarBarang);
+        // Storage::putFile('Gambar', $request->file('gambarBarang'));
+        $destinationPath = public_path('/Image/');
+        $file = $request->file('gambarBarang');
+        // $allowedExt = ['jpg','jpeg','png'];
+        $extension = $file->getClientOriginalExtension();
+        // $filesize = $file->getSize();
+        
         $barang = new barang();
         $barang->id_barang = $request->idBarang;
         $barang->nama_barang = $request->namaBarang;
@@ -39,6 +49,7 @@ class BarangController extends Controller
         $barang->id_kategori = $request->kategori;
         $barang->id_subkategori = $request->subKategori;
         if ($barang->save()) {
+            $file->move($destinationPath.$request->idBarang.'/','profil.jpg');
             return redirect()->route('viewBarang')->with('messages','Kategori berhasil ditambah');
         }
         else{
@@ -66,10 +77,47 @@ class BarangController extends Controller
 
     public function updateBarang(Request $request)
     {
-        # code...
+        $daftarBarang = barang::find($request->key);
+        $daftarKategori = kategori::all();
+        $daftarSubKategori = subkategori::all();
+        return view('Content.Admin.MasterBarang.updateBarang',
+        [
+            'daftarKategori' => $daftarKategori,
+            'daftarSubKategori' => $daftarSubKategori,
+            'daftarBarang' => $daftarBarang,
+        ]);
     }
-    public function douUpdateBarang(Request $request)
+    public function doUpdateBarang(Request $request)
     {
+        $this->validate($request, [
+            'idBarang' => 'required',
+            'namaBarang' => 'required',
+            'hargaBarang' => 'required',
+            'deskripsiBarang' => 'required',
+        ]);
+        // $request->file('gambarBarang')->store('Gambar');
+        // $request->gambarBarang->storeAs('Gambar/'.$request->idBarang, $request->gambarBarang->getClientOriginalName());
+        // Storage::disk('public')->put($request->gambarBarang->getClientOriginalName(), $request->gambarBarang);
+        // Storage::putFile('Gambar', $request->file('gambarBarang'));
+        $destinationPath = public_path('/Image/');
+        $file = $request->file('gambarBarang');
+        // $allowedExt = ['jpg','jpeg','png'];
+        $extension = $file->getClientOriginalExtension();
+        // $filesize = $file->getSize();
         
+        $barang = barang::find($request->key);
+        $barang->id_barang = $request->idBarang;
+        $barang->nama_barang = $request->namaBarang;
+        $barang->harga_barang = $request->hargaBarang;
+        $barang->deskripsi_barang = $request->deskripsiBarang;
+        $barang->gambar_barang = $request->gambarBarang->getClientOriginalName();
+        $barang->id_kategori = $request->kategori;
+        $barang->id_subkategori = $request->subKategori;
+        if ($barang->save()) {
+            $file->move($destinationPath.$request->idBarang.'/','profil.jpg');
+            return redirect()->route('viewBarang')->with('messages','Barang berhasil diganti');
+        }
+        else{
+        }
     }
 }

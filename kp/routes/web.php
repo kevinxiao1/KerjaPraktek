@@ -27,6 +27,9 @@ Route::group(['prefix'=>'admin'], function() {
     Route::get('/deleteBarang','BarangController@deleteBarang')->name('deleteBarang');
     Route::get('/unDeleteBarang','BarangController@unDeleteBarang')->name('unDeleteBarang');
 
+    //update
+    Route::get('/updateBarang','BarangController@updateBarang')->name('updateBarang');
+    Route::post('/doUpdateBarang','BarangController@doUpdateBarang')->name('doUpdateBarang');
 //Kategori 
 // view
     Route::get('/viewKategori','adminController@viewKategori')->name('viewKategori');

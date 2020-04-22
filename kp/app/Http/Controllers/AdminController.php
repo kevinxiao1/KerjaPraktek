@@ -16,6 +16,7 @@ class AdminController extends Controller
     }
     public function viewBarang(Request $request)
     {
+        // dd(public_path());
         $daftarBarang = barang::all();
         return view('Content.Admin.MasterBarang.viewBarang',
             [

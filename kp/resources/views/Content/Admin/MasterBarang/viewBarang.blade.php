@@ -29,8 +29,9 @@
                     @if ($item['gambar_barang'] == null)
                         <td><img src="{{ asset('ImageNotFound/notFound.png') }}" style="width: 150px" alt=""></td>
                     @else
-                        <td><img src="{{ asset('storage/Gambar/').'/'.$item['id_barang'].'/'.$item['gambar_barang'] }}" style="width: 150px" alt=""></td>
+                        <td><img src="{{ asset('Image/'.$item['id_barang'].'/profil.jpg')}}" style="width: 150px" alt=""></td>
                     @endif
+                    {{-- <img src="http://localhost:8000/Gambar/asw/1581918457982.jpg" style="width: 150px" alt=""> --}}
                     <td>{{$item['id_barang']}}</td>
                     <td>{{$item['nama_barang']}}</td>
                     <td>{{$item['harga_barang']}}</td>
@@ -45,11 +46,11 @@
                         @endif
                     </td>
                     <td>
-                        {{-- <form method="get" action="{{route('UpdateBarang')}}"> --}}
-                            {{-- @csrf --}}
+                        <form method="get" action="{{route('updateBarang')}}">
+                            @csrf
                             <input type="hidden" name="key" value="{{$item['id_barang']}}" />
                             <button type="submit" class="btn btn-block btn-warning">Ubah</button>
-                        {{-- </form> --}}
+                        </form>
                     </td>
                     <td>
                         @if ($item['status_barang'] == 1)
