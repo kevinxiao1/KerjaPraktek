@@ -26,7 +26,11 @@
                 @foreach ($daftarBarang as $item)
                 <tr>
                     <td>{{$loop->index+1}}</td>
-                    <td><img src="{{ asset('storage/Gambar/').'/'.$item['id_barang'].'/'.$item['gambar_barang'] }}" style="width: 150px" alt=""></td>
+                    @if ($item['gambar_barang'] == null)
+                        <td><img src="{{ asset('ImageNotFound/notFound.png') }}" style="width: 150px" alt=""></td>
+                    @else
+                        <td><img src="{{ asset('storage/Gambar/').'/'.$item['id_barang'].'/'.$item['gambar_barang'] }}" style="width: 150px" alt=""></td>
+                    @endif
                     <td>{{$item['id_barang']}}</td>
                     <td>{{$item['nama_barang']}}</td>
                     <td>{{$item['harga_barang']}}</td>
