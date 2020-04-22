@@ -29,7 +29,7 @@ class BarangController extends Controller
             'deskripsiBarang' => 'required',
         ]);
         // $request->file('gambarBarang')->store('Gambar');
-        $request->gambarBarang->storeAs('Gambar', $request->gambarBarang->getClientOriginalName());
+        $request->gambarBarang->storeAs('Gambar/'.$request->idBarang, $request->gambarBarang->getClientOriginalName());
         $barang = new barang();
         $barang->id_barang = $request->idBarang;
         $barang->nama_barang = $request->namaBarang;
