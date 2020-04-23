@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\barang;
 use Illuminate\Http\Request;
 
 class siteController extends Controller
@@ -9,7 +10,11 @@ class siteController extends Controller
     //
     public function Home(Request $request)
     {
-        return view('Content.SiteContent.Site');
+        $daftarBarang = barang::all();
+        return view('Content.SiteContent.Site',
+        [
+            'daftarBarang' => $daftarBarang,
+        ]);
     }
     public function Products(Request $request)
     {

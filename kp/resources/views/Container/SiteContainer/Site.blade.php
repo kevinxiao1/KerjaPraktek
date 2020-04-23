@@ -62,12 +62,6 @@
                                     <a class="nav-link" href="{{url('/#product')}}">Our Product</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{url('/#bestSeller')}}">Best Seller</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{url('/#client')}}">Our Client</a>
-                                </li>
-                                <li class="nav-item">
                                     <a class="nav-link" href="{{url('/#contact')}}">Contact Us</a>
                                 </li>
                             </ul>
