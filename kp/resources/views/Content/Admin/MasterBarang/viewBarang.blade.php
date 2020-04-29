@@ -34,7 +34,7 @@
                     {{-- <img src="http://localhost:8000/Gambar/asw/1581918457982.jpg" style="width: 150px" alt=""> --}}
                     <td>{{$item['id_barang']}}</td>
                     <td>{{$item['nama_barang']}}</td>
-                    <td>{{$item['harga_barang']}}</td>
+                    <td>Rp.{{number_format($item['harga_barang'],2,",",".") }}</td>
                     <td>{!!$item['deskripsi_barang']!!}</td>
                     <td>{{$item->Kategori['nama_kategori']}}</td>
                     <td>{{$item->Subkategori['nama_subkategori']}}</td>

@@ -27,7 +27,7 @@
             </div>
             <div class="form-group">
               <label for="hargaBarang">Harga Barang</label>
-              <input type="text" name="hargaBarang" class="form-control" id="hargaBarang" placeholder="Masukan Harga Barang">
+              <input type="number" name="hargaBarang" class="form-control" id="hargaBarang" placeholder="Masukan Harga Barang">
                 @if ($errors->has('hargaBarang'))
                   <span class="help-block">{{$errors->first('hargaBarang','Field tidak boleh kosong')}}</span>
                 @endif  

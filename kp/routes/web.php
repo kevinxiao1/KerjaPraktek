@@ -13,6 +13,11 @@
 
 Route::get('/','SiteController@Home')->name('Home');
 Route::get('/products','SiteController@Products')->name('Products');
+Route::get('/products/kategori/{kategori}','SiteController@ProductsKategori')->name('ProductsKategori');
+Route::get('/products/subkategori/{subkategori}','SiteController@ProductsSubKategori')->name('ProductsSubKategori');
+Route::get('/products/search','SiteController@ProductsSearch')->name('ProductsSearch');
+Route::get('/products/productsdetail/{id}','SiteController@ProductsDetail')->name('ProductsDetail');
+
 Route::get('/login','SiteController@Login')->name('Login');
 Route::post('/doLogin','SiteController@doLogin')->name('doLogin');
 Route::group(['prefix'=>'admin'], function() {

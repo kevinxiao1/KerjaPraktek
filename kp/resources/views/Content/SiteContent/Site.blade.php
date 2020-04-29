@@ -138,7 +138,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-12">
                 <div class="section_tittle text-center">
-                    <h2>Our Product</h2>
+                    <h2>Our Product <span><a href="/products">View More</a></span> </h2>
                 </div>
             </div>
         </div>
@@ -157,8 +157,8 @@
                                         @endif
                                         <div class="single_product_text">
                                             <h4>{{ $item['nama_barang'] }}</h4>
-                                            <h3>{{ $item['harga_barang'] }}</h3>
-                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                            <h3>Rp.{{number_format($item['harga_barang'],2,",",".") }}</h3>
+                                            <a href="/products/productsdetail/{{$item['id_barang']}}" class="add_cart">view details</a>
                                         </div>
                                     </div>
                                 </div>

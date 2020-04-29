@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="{{asset('Site/css/slick.css')}}">
     <!-- style CSS -->
     <link rel="stylesheet" href="{{asset('Site/css/style.css')}}">
+    {{-- ajax --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  
     <style>
         .fix {
             /* overflow: hidden; */
@@ -43,7 +46,7 @@
                 <div class="col-lg-12">
                     
                     <nav class="navbar navbar-expand-lg navbar-light ">
-                        <a class="navbar-brand" href="index.html"> <img src="img/logo.png" alt="logo"> </a>
+                        <a class="navbar-brand" href="/"> <img src="img/logo.png" alt="logo"> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
