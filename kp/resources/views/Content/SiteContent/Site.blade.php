@@ -98,23 +98,23 @@
             <div class="col-lg-7 col-sm-6">
                 <div class="single_feature_post_text">
                     <p>Best Quality</p>
-                    <h3>Low Pressure</h3>
-                    <a href="#" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
+                    <h3>Air Compressor SDP</h3>
+                    <a href="/products/kategori/AC" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
                     <img src="{{asset('/Site/img/feature/feature_1.png')}}" alt="">
                 </div>
             </div>
             <div class="col-lg-5 col-sm-6">
                 <div class="single_feature_post_text">
                     <p>Best Quality</p>
-                    <h3>Opener</h3>
-                    <a href="#" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
+                    <h3>Tyre Opener</h3>
+                    <a href="/products/kategori/TO" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
                     <img src="{{asset('/Site/img/feature/feature_2.png')}}" alt="">
                 </div>
             </div>
             <div class="col-lg-5 col-sm-6">
                 <div class="single_feature_post_text">
                     <p>Best Quality</p>
-                    <h3>Medium Pressure</h3>
+                    <h3>Snowash</h3>
                     <a href="#" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
                 <img src="{{asset('/Site/img/feature/feature_3.png')}}" alt="">
                 </div>
@@ -122,9 +122,25 @@
             <div class="col-lg-7 col-sm-6">
                 <div class="single_feature_post_text">
                     <p>Best Quality</p>
-                    <h3>High Pressure</h3>
-                    <a href="#" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
+                    <h3>Diesel</h3>
+                    <a href="/products/kategori/DE" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
                     <img src="{{asset('/Site/img/feature/feature_4.png')}}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-7 col-sm-6">
+                <div class="single_feature_post_text">
+                    <p>Best Quality</p>
+                    <h3>Gasoline</h3>
+                    <a href="/products/kategori/GE" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
+                    <img src="{{asset('/Site/img/feature/feature_1.png')}}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-5 col-sm-6">
+                <div class="single_feature_post_text">
+                    <p>Best Quality</p>
+                    <h3>Premium</h3>
+                    <a href="#" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
+                    <img src="{{asset('/Site/img/feature/feature_2.png')}}" alt="">
                 </div>
             </div>
         </div>
@@ -162,7 +178,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                @if ($loop->index+1 == 8)
+                                @if ($loop->index+1 == 4)
                                     @break
                                 @endif
                             @endforeach

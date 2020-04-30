@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="{{asset('Site/css/style.css')}}">
     {{-- ajax --}}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  
+
     <style>
         .fix {
             /* overflow: hidden; */
@@ -34,6 +34,28 @@
             position: fixed;
             top: 0;
             left: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+        .float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+        }
+
+        .my-float {
+            margin-top: 16px;
         }
     </style>
 </head>
@@ -44,7 +66,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-12">
-                    
+
                     <nav class="navbar navbar-expand-lg navbar-light ">
                         <a class="navbar-brand" href="/"> <img src="img/logo.png" alt="logo"> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -102,7 +124,11 @@
     <!-- Header part end-->
 
     @yield('content')
-
+    {{-- <span class="float">Need Help?</span> --}}
+    <a href="https://api.whatsapp.com/send?phone=6281357260908&text=Saya%20ingin%20mencari%20barang%20di%20toko%20ini.%20Mohon%20Bantuannya."
+        target="blank" class="float">
+        <i class="fa fa-phone my-float"></i>
+    </a>
     <!--::footer_part start::-->
     <footer class="footer_part">
         {{-- <div class="container">
@@ -182,7 +208,6 @@
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 Copyright &copy;<script>
                                     document.write(new Date().getFullYear());
-
                                 </script> All rights reserved | This template is made with <i class="ti-heart"
                                     aria-hidden="true"></i> by <a href="https://colorlib.com"
                                     target="_blank">Colorlib</a>
