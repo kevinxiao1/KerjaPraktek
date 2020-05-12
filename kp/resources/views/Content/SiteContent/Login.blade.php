@@ -24,14 +24,31 @@
     <link rel="stylesheet" href="{{asset('Site/css/slick.css')}}">
     <!-- style CSS -->
     <link rel="stylesheet" href="{{asset('Site/css/style.css')}}">
+    <style>
+        .html{
+            text-align: center;
+            justify-content: center;
+            justify-items: center;
+        }
+    </style>
 </head>
 
-<body>
+<body style="justify-items: center">
 
     <!--================login_part Area =================-->
-    <section class="login_part padding_top">
+    <section class="login_part" style="padding-top: 5%">
         <div class="container">
-                <div class="col-lg-12 col-md-12" style="text-align: center">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6">
+                    <div class="login_part_text text-center">
+                        <div class="login_part_text_iner">
+                            <h2>Pastikan anda adalah admin</h2>
+                            <p></p>
+                            {{-- <a href="#" class="btn_3">Create an Account</a> --}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
                     <div class="login_part_form">
                         <div class="login_part_form_iner">
                             <h3>
@@ -54,6 +71,7 @@
                             </form>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
     </section>
