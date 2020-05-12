@@ -12,6 +12,10 @@ class kategori extends Model
 
     public function Kategori()
     {
-        return $this->hasMany('App\Model\kategori', 'id_kategori', 'id_kategori');
+        return $this->hasMany('App\Model\barang', 'id_kategori', 'id_kategori');
+    }
+    public function Subkategori()
+    {
+        return $this->belongsTo('App\Model\subkategori', 'id_subkategori', 'id_subkategori');
     }
 }

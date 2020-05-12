@@ -12,6 +12,7 @@ class subkategori extends Model
 
     public function Subkategori()
     {
-        return $this->hasMany('App\Model\subkategori', 'id_subkategori', 'id_subkategori');
+        return $this->hasMany('App\Model\kategori', 'id_subkategori', 'id_subkategori');
     }
+ 
 }
