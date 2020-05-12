@@ -7,40 +7,58 @@ use App\Model\kategori;
 use App\Model\subkategori;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Session;     
+
 
 class AdminController extends Controller
 {
     //
     public function Dashboard(Request $request){
-        return view('Content.Admin.Dashboard.ContentDashboard');
+        if (Session::has("username")) {
+            return view('Content.Admin.Dashboard.ContentDashboard');
+        }
     }
     public function viewBarang(Request $request)
     {
         // dd(public_path());
-        $daftarBarang = barang::all();
-        return view('Content.Admin.MasterBarang.viewBarang',
-            [
-                'daftarBarang' => $daftarBarang,
-            ]
-        );
+        if (Session::has("username")) {
+            $daftarBarang = barang::all();
+            return view('Content.Admin.MasterBarang.viewBarang',
+                [
+                    'daftarBarang' => $daftarBarang,
+                ]
+            );
+        }
+        
     }
     public function viewKategori(Request $request)
     {
-        $daftarKategori = kategori::all();
-        return view('Content.Admin.MasterKategori.viewKategori',
-            [
-                'daftarKategori' => $daftarKategori,
-            ]
-        );
+        if (Session::has("username")) {
+            $daftarKategori = kategori::all();
+            return view('Content.Admin.MasterKategori.viewKategori',
+                [
+                    'daftarKategori' => $daftarKategori,
+                ]
+            );
+        }
+        
     }
 
     public function viewSubKategori(Request $request)
     {
-        $daftarSubKategori = subkategori::all();
-        return view('Content.Admin.MasterSubKategori.viewSubKategori',
-            [
-                'daftarSubKategori' => $daftarSubKategori,
-            ]
-        );
+        if (Session::has("username")) {
+            $daftarSubKategori = subkategori::all();
+            return view('Content.Admin.MasterSubKategori.viewSubKategori',
+                [
+                    'daftarSubKategori' => $daftarSubKategori,
+                ]
+            );
+        }
+        
+    }
+    public function Logout()
+    {
+        Session::forget('username');
+        return redirect('/login');
     }
 }

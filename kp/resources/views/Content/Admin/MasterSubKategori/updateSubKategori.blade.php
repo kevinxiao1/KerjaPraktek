@@ -11,6 +11,18 @@
         <form role="form" action="{{ route('doUpdateSubKategori')}}">
           <div class="card-body">
             <div class="form-group">
+              <label for="kategori">Kategori Barang</label>
+              <select class="form-control" name="kategori">
+                @foreach ($daftarKategori as $item)
+                  @if ($item['id_kategori'] == $item->Subkategori['id_kategori'])
+                    <option selected value="{{ $item["id_kategori"] }}">{{ $item["nama_kategori"] }}</option>
+                  @else
+                    <option value="{{ $item["id_kategori"] }}">{{ $item["nama_kategori"] }}</option>
+                  @endif
+                @endforeach
+              </select>
+            </div>
+            <div class="form-group">
               <label for="idKategori">ID SubKategori</label>
               <input type="text" name="idSubKategori" value="{{ $daftarSubKategori['id_subkategori'] }}" class="form-control" id="idSubKategori" placeholder="Masukan Id Kategori">
                 @if ($errors->has('idSubKategori'))

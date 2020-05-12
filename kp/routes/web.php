@@ -22,6 +22,7 @@ Route::get('/login','SiteController@Login')->name('Login');
 Route::post('/doLogin','SiteController@doLogin')->name('doLogin');
 Route::group(['prefix'=>'admin'], function() {
     Route::get('/dashboard','adminController@dashboard')->name('dashboard');
+    Route::get('/Logout','adminController@Logout')->name('Logout');
 
     // barang
     Route::get('/viewBarang','adminController@viewBarang')->name('viewBarang');

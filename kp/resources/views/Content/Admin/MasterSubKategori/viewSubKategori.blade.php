@@ -10,6 +10,7 @@
             <thead>
                 <tr>
                     <th>No. </th>
+                    <th>Id Kategori</th>
                     <th>Id SubKategori</th>
                     <th>Nama SubKategori</th>
                     <th>Status SubKategori</th>
@@ -21,6 +22,7 @@
                 @foreach ($daftarSubKategori as $item)
                     <tr>
                         <td>{{$loop->index+1}}</td>
+                        <td>{{$item['id_kategori']}}</td>
                         <td>{{$item['id_subkategori']}}</td>
                         <td>{{$item['nama_subkategori']}}</td>
                         <td>

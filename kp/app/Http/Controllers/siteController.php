@@ -7,6 +7,7 @@ use App\Model\kategori;
 use App\Model\subkategori;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class siteController extends Controller
 {
@@ -25,12 +26,16 @@ class siteController extends Controller
         $daftarBarang = DB::table('barang')->paginate(6);
         $daftarKategori = kategori::all();
         $daftarSubKategori = subkategori::all();
+        $kategoriTerpilih = "";
+        $subKategoriTerpilih = "";
         // $jumlahBarang = DB::table('barang')->count();
         return view('Content.SiteContent.Katalog.viewKatalog',
         [
             'daftarBarang' => $daftarBarang,
             'daftarKategori' => $daftarKategori,
             'daftarSubKategori' => $daftarSubKategori,
+            'kategoriTerpilih' => $kategoriTerpilih,
+            'subKategoriTerpilih' => $subKategoriTerpilih,
             // 'jumlahBarang' => $jumlahBarang,
         ]);
     }
@@ -77,7 +82,9 @@ class siteController extends Controller
         $daftarBarang = DB::table('barang')->where('id_subkategori',$subkategori)->paginate(6);
         $daftarKategori = kategori::all();
         $daftarSubKategori = subkategori::all();
-        $kategoriTerpilih = "";
+        $kategori = subkategori::find($subkategori);
+        // dd($kategori['id_kategori']);
+        $kategoriTerpilih = $kategori['id_kategori'];
         $subKategoriTerpilih = $subkategori;
         // $jumlahBarang = DB::table('barang')->count();
         return view('Content.SiteContent.Katalog.viewKatalog',
@@ -106,7 +113,11 @@ class siteController extends Controller
     public function doLogin(Request $request)
     {
         if ($request->username =="admin" && $request->password =="admin") {
+            Session::put("username",$request->username); 
             return  redirect('/admin/dashboard');
+        }
+        else{
+            return  redirect('/login');
         }
     }
 }

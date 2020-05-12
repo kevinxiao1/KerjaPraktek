@@ -11,6 +11,14 @@
         <form role="form" action="{{ route('doCreateSubKategori')}}">
           <div class="card-body">
             <div class="form-group">
+              <label for="kategori">Kategori Barang</label>
+              <select class="form-control" name="kategori">
+                @foreach ($daftarKategori as $item)
+                    <option value="{{ $item["id_kategori"] }}">{{ $item["nama_kategori"] }}</option>
+                @endforeach
+              </select>
+            </div>
+            <div class="form-group">
               <label for="idKategori">ID SubKategori</label>
               <input type="text" name="idSubKategori" class="form-control" id="idSubKategori" placeholder="Masukan Id SubKategori">
                 @if ($errors->has('idSubKategori'))

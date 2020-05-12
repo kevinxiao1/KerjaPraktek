@@ -166,6 +166,16 @@
                                 </li>
                             </ul>
                         </li>
+                        {{-- master sub kategori --}}
+                        <li class="nav-item has-treeview">
+                            <a href="/admin/Logout" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
+                                    Logout
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
