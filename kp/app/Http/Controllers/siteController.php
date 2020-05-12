@@ -62,8 +62,10 @@ class siteController extends Controller
     {
         $daftarBarang = DB::table('barang')->where('id_kategori',$kategori)->paginate(6);
         $daftarKategori = kategori::all();
-        $daftarSubKategori = subkategori::all();
+        $daftarSubKategori = subkategori::select()->where('id_kategori','=',$kategori)->get();
+        // dd($daftarSubKategori);
         // $jumlahBarang = DB::table('barang')->count();
+        // $sub = kategori::find($kategori);
         $kategoriTerpilih = $kategori;
         $subKategoriTerpilih = "";
         return view('Content.SiteContent.Katalog.viewKatalog',
