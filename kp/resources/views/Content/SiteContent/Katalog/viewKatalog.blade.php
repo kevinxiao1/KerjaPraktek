@@ -13,9 +13,17 @@
                         <div class="widgets_inner">
                             <ul class="list">
                                 @foreach ($daftarKategori as $item)
-                                <li>
-                                    <a href="/products/kategori/{{ $item['id_kategori'] }}">{{ $item['nama_kategori'] }}</a>
-                                </li>
+                                    @if ($item['id_kategori'] == $kategoriTerpilih)
+                                        <li>
+                                            <a style="color: red"
+                                                href="/products/kategori/{{ $item['id_kategori'] }}">{{ $item['nama_kategori'] }}</a>
+                                        </li>
+                                    @else
+                                        <li>
+                                            <a
+                                                href="/products/kategori/{{ $item['id_kategori'] }}">{{ $item['nama_kategori'] }}</a>
+                                        </li>
+                                    @endif
                                 @endforeach
                                 <li>
                                     <a href="/products/" style="color: red">Reset</a>
@@ -31,9 +39,18 @@
                         <div class="widgets_inner">
                             <ul class="list">
                                 @foreach ($daftarSubKategori as $item)
+                                @if ($item['id_subkategori'] == $subKategoriTerpilih)
                                 <li>
-                                    <a href="/products/subkategori/{{ $item['id_subkategori'] }}">{{ $item['nama_subkategori'] }}</a>
+                                    <a style="color: red"
+                                        href="/products/subkategori/{{ $item['id_subkategori'] }}">{{ $item['nama_subkategori'] }}</a>
                                 </li>
+                                @else
+                                <li>
+                                    <a
+                                        href="/products/subkategori/{{ $item['id_subkategori'] }}">{{ $item['nama_subkategori'] }}</a>
+                                </li>
+                                @endif
+
                                 @endforeach
                                 <li>
                                     <a href="/products/" style="color: red">Reset</a>
@@ -48,7 +65,7 @@
                     <div class="col-lg-12">
                         <div class="product_top_bar d-flex justify-content-between align-items-center">
                             <div class="single_product_menu">
-                                <p><span> {{ count($daftarBarang) }} </span> Prodict Found</p>
+                                <p><span> {{ count($daftarBarang) }} </span> Product Found</p>
                             </div>
                             <div class="single_product_menu">
                                 <form action="{{ url('/products/search') }}" method="get">
@@ -61,7 +78,7 @@
                                         </div>
                                     </div>
                                 </form>
-                                
+
                             </div>
                         </div>
                     </div>

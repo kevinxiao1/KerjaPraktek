@@ -59,11 +59,15 @@ class siteController extends Controller
         $daftarKategori = kategori::all();
         $daftarSubKategori = subkategori::all();
         // $jumlahBarang = DB::table('barang')->count();
+        $kategoriTerpilih = $kategori;
+        $subKategoriTerpilih = "";
         return view('Content.SiteContent.Katalog.viewKatalog',
         [
             'daftarBarang' => $daftarBarang,
             'daftarKategori' => $daftarKategori,
             'daftarSubKategori' => $daftarSubKategori,
+            'kategoriTerpilih' => $kategoriTerpilih,
+            'subKategoriTerpilih' => $subKategoriTerpilih,
             // 'jumlahBarang' => $jumlahBarang,
         ]);
     }
@@ -73,12 +77,16 @@ class siteController extends Controller
         $daftarBarang = DB::table('barang')->where('id_subkategori',$subkategori)->paginate(6);
         $daftarKategori = kategori::all();
         $daftarSubKategori = subkategori::all();
+        $kategoriTerpilih = "";
+        $subKategoriTerpilih = $subkategori;
         // $jumlahBarang = DB::table('barang')->count();
         return view('Content.SiteContent.Katalog.viewKatalog',
         [
             'daftarBarang' => $daftarBarang,
             'daftarKategori' => $daftarKategori,
             'daftarSubKategori' => $daftarSubKategori,
+            'subKategoriTerpilih' => $subKategoriTerpilih,
+            'kategoriTerpilih' => $kategoriTerpilih,
             // 'jumlahBarang' => $jumlahBarang,
         ]);
     }
