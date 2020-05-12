@@ -39,6 +39,7 @@
         html {
             scroll-behavior: smooth;
         }
+
         .float {
             position: fixed;
             width: 60px;
@@ -57,10 +58,92 @@
         .my-float {
             margin-top: 16px;
         }
+
+        body,
+        html {
+            height: 100%;
+            text-align: center;
+        }
+
+        body {
+            /* background-color: #242F3F; */
+        }
+
+        .loader {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            position: relative;
+            border: 4px solid #Fff;
+            animation: loader 2s infinite ease;
+        }
+
+        .loader-inner {
+            vertical-align: top;
+            display: inline-block;
+            width: 100%;
+            background-color: #fff;
+            animation: loader-inner 2s infinite ease-in;
+        }
+        .loader-wrapper{
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #242F3F;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @keyframes loader {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(180deg);
+            }
+
+            50% {
+                transform: rotate(180deg);
+            }
+
+            75% {
+                transform: rotate(360deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes loader-inner {
+            0% {
+                height: 0%;
+            }
+
+            25% {
+                height: 0%;
+            }
+
+            50% {
+                height: 100%;
+            }
+
+            75% {
+                height: 100%;
+            }
+
+            100% {
+                height: 0%;
+            }
+        }
     </style>
 </head>
 
 <body>
+    
     <!--::header part start::-->
     <header class="main_menu home_menu">
         <div class="container">
@@ -129,6 +212,9 @@
         target="blank" class="float">
         <i class="fa fa-phone my-float"></i>
     </a>
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
     <!--::footer_part start::-->
     <footer class="footer_part">
         {{-- <div class="container">
@@ -230,7 +316,12 @@
         </div>
     </footer>
     <!--::footer_part end::-->
-
+    {{-- for loader --}}
+    <script>
+        $(window).on("load",function(){
+            $(".loader-wrapper").fadeOut("slow");
+        });
+    </script>
     <!-- jquery plugins here-->
     <script src="{{asset('Site/js/jquery-1.12.1.min.js')}}"></script>
     <!-- popper js -->
