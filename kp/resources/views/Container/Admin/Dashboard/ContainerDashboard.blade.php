@@ -31,6 +31,10 @@
     <link rel="stylesheet" href="{{asset('Admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    {{-- <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script> --}}
+
+
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -247,23 +251,26 @@
         </aside>
         <!-- /.control-sidebar -->
     </div>
+    
     <!-- ./wrapper -->
 
     <!-- jQuery -->
-    <script src="{{asset('Admin/plugins/jquery/jquery.min.js')}}"></script>
+    <script src="{{asset('Admin/plugins/jquery/jquery.js')}}"></script>
+    {{-- ajax --}}
+    {{-- <script src="http://demo.itsolutionstuff.com/plugin/jquery.js"></script> --}}
+
     <!-- jQuery UI 1.11.4 -->
     <script src="{{asset('Admin/plugins/jquery-ui/jquery-ui.min.js')}}"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>
         $.widget.bridge('uibutton', $.ui.button)
-
     </script>
     {{-- CKEDITOR --}}
     <script src="{{asset('ckeditor/ckeditor.js')}}"></script>
     <script>
         var konten = document.getElementById("deskripsiBarang");
-            CKEDITOR.replace(konten,{
-            language:'en-gb'
+        CKEDITOR.replace(konten, {
+            language: 'en-gb'
         });
         CKEDITOR.config.allowedContent = true;
     </script>
@@ -273,7 +280,7 @@
     <script src="{{asset('Admin/plugins/bs-custom-file-input/bs-custom-file-input.min.js')}}"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-          bsCustomFileInput.init();
+            bsCustomFileInput.init();
         });
     </script>
     <!-- DataTables -->
@@ -297,7 +304,34 @@
                 "responsive": true,
             });
         });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('select[name="kategori"]').on('change', function () {
+                var idKategori = $(this).val();
+                if (idKategori) {
+                    $.ajax({
+                        url: '/admin/createBarang/ajax/' + idKategori,
+                        method: "GET",
+                        dataType: "json",
+                        success: function (data) {
 
+
+                            $('select[name="subKategori"]').empty();
+                            $.each(data, function (key, value) {
+                                $('select[name="subKategori"]').append(
+                                    '<option value="' + value + '">' + key +
+                                    '</option>');
+                            });
+
+
+                        }
+                    });
+                } else {
+                    $('select[name="subKategori"]').empty();
+                }
+            });
+        });
     </script>
     <!-- Bootstrap 4 -->
     <script src="{{asset('Admin/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>

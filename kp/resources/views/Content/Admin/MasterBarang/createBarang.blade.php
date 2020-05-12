@@ -52,9 +52,6 @@
             <div class="form-group">
               <label for="deskripsiBarang">SubKategori Barang</label>
               <select class="form-control" name="subKategori">
-                @foreach ($daftarSubKategori as $item)
-                    <option value="{{ $item["id_subkategori"] }}">{{ $item["nama_subkategori"] }}</option>
-                @endforeach
               </select>
             </div>
             <div class="form-group">

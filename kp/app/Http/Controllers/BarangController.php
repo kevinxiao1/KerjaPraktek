@@ -7,7 +7,9 @@ use App\Model\kategori;
 use App\Model\subkategori;
 use Illuminate\Http\File;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use SebastianBergmann\Environment\Console;
 
 class BarangController extends Controller
 {
@@ -20,6 +22,16 @@ class BarangController extends Controller
             'daftarKategori' => $daftarKategori,
             'daftarSubKategori' => $daftarSubKategori,
         ]);
+    }
+    public function barangAjax($id)
+    {
+    //    Console.log("cok");
+        $subkategori = subkategori::select()
+                    ->where("id_kategori",$id)
+                    ->pluck('id_subkategori','nama_subkategori')
+                    ->toArray();
+        // dd($subkategori);
+        return json_encode($subkategori);
     }
 
     public function doCreateBarang(Request $request)

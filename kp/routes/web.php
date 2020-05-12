@@ -27,7 +27,10 @@ Route::group(['prefix'=>'admin'], function() {
     // barang
     Route::get('/viewBarang','adminController@viewBarang')->name('viewBarang');
     // create
-    Route::get('/createBarang','BarangController@createBarang')->name('createBarang');
+    Route::get('/createBarang',array('as'=>'createBarang','uses'=>'BarangController@createBarang'));
+    //ajax
+    Route::get('/createBarang/ajax/{id}',array('as'=>'createBarang.ajax','uses'=>'BarangController@barangAjax'));
+
     Route::post('/doCreateBarang','BarangController@doCreateBarang')->name('doCreateBarang');
     // delete
     Route::get('/deleteBarang','BarangController@deleteBarang')->name('deleteBarang');
