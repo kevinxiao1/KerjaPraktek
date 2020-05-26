@@ -114,7 +114,10 @@ class BarangController extends Controller
         $destinationPath = public_path('/Image/');
         $file = $request->file('gambarBarang');
         // $allowedExt = ['jpg','jpeg','png'];
-        $extension = $file->getClientOriginalExtension();
+        if ($file != null) {
+            $extension = $file->getClientOriginalExtension();
+        }
+        
         // $filesize = $file->getSize();
         
         $barang = barang::find($request->key);
@@ -122,11 +125,15 @@ class BarangController extends Controller
         $barang->nama_barang = $request->namaBarang;
         $barang->harga_barang = $request->hargaBarang;
         $barang->deskripsi_barang = $request->deskripsiBarang;
-        $barang->gambar_barang = $request->gambarBarang->getClientOriginalName();
+        if ($file != null) {
+            $barang->gambar_barang = $request->gambarBarang->getClientOriginalName();
+        }
         $barang->id_kategori = $request->kategori;
         $barang->id_subkategori = $request->subKategori;
         if ($barang->save()) {
-            $file->move($destinationPath.$request->idBarang.'/','profil.jpg');
+            if ($file != null) {
+                $file->move($destinationPath.$request->idBarang.'/','profil.jpg');
+            }
             return redirect()->route('viewBarang')->with('messages','Barang berhasil diganti');
         }
         else{
