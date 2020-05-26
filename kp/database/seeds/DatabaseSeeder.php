@@ -261,6 +261,7 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '1.jpg',
             'id_kategori' => 'AC',
             'id_subkategori' => 'UVL',
+            
         ],
         [
             'id_barang' => 'AC-UVL-002',
@@ -342,6 +343,7 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '1.jpg',
             'id_kategori' => 'AC',
             'id_subkategori' => 'JSE',
+            'linktokped' => 'https://www.tokopedia.com/cvssd/kompresor-shark-auto-0-25hp-e-motor-lvpm-5114'
         ],
         [
             'id_barang' => 'AC-JSE-002',
