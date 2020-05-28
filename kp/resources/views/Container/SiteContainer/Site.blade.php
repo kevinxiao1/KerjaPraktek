@@ -294,9 +294,8 @@
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 Copyright &copy;<script>
                                     document.write(new Date().getFullYear());
-                                </script> All rights reserved | This template is made with <i class="ti-heart"
-                                    aria-hidden="true"></i> by <a href="https://colorlib.com"
-                                    target="_blank">Colorlib</a>
+                                </script> All rights reserved | by <a href="https://colorlib.com"
+                                    target="_blank"> Sinar Surya DIesel, Official Distributor of Shark and SDP</a>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </P>
                         </div>
@@ -307,7 +306,7 @@
                                 <li><a href="#" class="single_social_icon"><i class="fab fa-facebook-f"></i></a></li>
                                 <li><a href="#" class="single_social_icon"><i class="fab fa-twitter"></i></a></li>
                                 <li><a href="#" class="single_social_icon"><i class="fas fa-globe"></i></a></li>
-                                <li><a href="#" class="single_social_icon"><i class="fab fa-behance"></i></a></li>
+                                {{-- <li><a href="#" class="single_social_icon"><i class="fab fa-behance"></i></a></li> --}}
                             </ul>
                         </div>
                     </div>
