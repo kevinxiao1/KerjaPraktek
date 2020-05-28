@@ -93,9 +93,14 @@ class DatabaseSeeder extends Seeder
                 'nama_subkategori' => 'Premium',
             ],
             [
+                'id_subkategori' => 'AMS',
+                'id_kategori' => 'AC',
+                'nama_subkategori' => 'Auto + Motor SDP',
+            ],
+            [
                 'id_subkategori' => 'AUS',
                 'id_kategori' => 'AC',
-                'nama_subkategori' => 'Auto + Motor Unloading SDP',
+                'nama_subkategori' => 'Unloading SDP',
             ],
             [
                 'id_subkategori' => 'JSS',
@@ -153,6 +158,11 @@ class DatabaseSeeder extends Seeder
                 'nama_subkategori' => 'Standard Gasoline Engine',
             ],
             [
+                'id_subkategori' => 'SDGE',
+                'id_kategori' => 'GE',
+                'nama_subkategori' => 'SDP Gasoline Engine',
+            ],
+            [
                 'id_subkategori' => 'PGE',
                 'id_kategori' => 'GE',
                 'nama_subkategori' => 'Premium Gasoline Engine',
@@ -167,6 +177,31 @@ class DatabaseSeeder extends Seeder
                 'id_kategori' => 'WP',
                 'nama_subkategori' => 'Premiumm Water Pump',
             ],
+            [
+                'id_subkategori' => 'SDPW',
+                'id_kategori' => 'WP',
+                'nama_subkategori' => 'SDP Water Pump',
+            ],
+            [
+                'id_subkategori' => 'SGG',
+                'id_kategori' => 'GG',
+                'nama_subkategori' => 'Standard Gasoline Generator',
+            ],
+            [
+                'id_subkategori' => 'SDGG',
+                'id_kategori' => 'GG',
+                'nama_subkategori' => 'SDP Gasoline Generator',
+            ],
+            [
+                'id_subkategori' => 'SEL',
+                'id_kategori' => 'EL',
+                'nama_subkategori' => 'Standard Elektro Motor',
+            ],
+            [
+                'id_subkategori' => 'SDL',
+                'id_kategori' => 'EL',
+                'nama_subkategori' => 'SDP Elektro Motor',
+            ],
             
         ]
     );
@@ -180,6 +215,7 @@ class DatabaseSeeder extends Seeder
           'gambar_barang' => '1.jpg',
           'id_kategori' => 'AC',
           'id_subkategori' => 'PSL',
+          'linktokped' => 'https://www.tokopedia.com/cvssd/kompresor-shark-auto-0-25hp-e-motor-lvpm-5114'
         ],
         [
           'id_barang' => 'AC-PSL-002',
@@ -189,6 +225,7 @@ class DatabaseSeeder extends Seeder
           'gambar_barang' => '2.jpg',
           'id_kategori' => 'AC',
           'id_subkategori' => 'PSL',
+          'linktokped' => 'https://www.tokopedia.com/cvssd/kompresor-shark-auto-0-5hp-e-motor-lvpm-5512'
         ],
         [
           'id_barang' => 'AC-PSL-003',
@@ -198,6 +235,7 @@ class DatabaseSeeder extends Seeder
           'gambar_barang' => '3.jpg',
           'id_kategori' => 'AC',
           'id_subkategori' => 'PSL',
+          'linktokped' => 'https://www.tokopedia.com/cvssd/kompresor-shark-auto-1hp-e-motor-lvpm-6501'
         ],
         [
           'id_barang' => 'AC-PSL-004',
@@ -207,6 +245,7 @@ class DatabaseSeeder extends Seeder
           'gambar_barang' => '4.jpg',
           'id_kategori' => 'AC',
           'id_subkategori' => 'PSL',
+          'linktokped' => 'https://www.tokopedia.com/cvssd/kompresor-shark-auto-2hp-e-motor-lwpm-6502'
         ],
         [
           'id_barang' => 'AC-PSL-005',
@@ -216,6 +255,7 @@ class DatabaseSeeder extends Seeder
           'gambar_barang' => '5.jpg',
           'id_kategori' => 'AC',
           'id_subkategori' => 'PSL',
+          'linktokped' => 'https://www.tokopedia.com/cvssd/kompresor-shark-auto-3hp-e-motor-lvpm-8003'
         ],
         [
           'id_barang' => 'AC-PSL-006',
@@ -225,6 +265,7 @@ class DatabaseSeeder extends Seeder
           'gambar_barang' => '6.jpg',
           'id_kategori' => 'AC',
           'id_subkategori' => 'PSL',
+          'linktokped' => 'https://www.tokopedia.com/cvssd/kompresor-shark-auto-5hp-e-motor-lvpm-8005'
         ],
         [
           'id_barang' => 'AC-PSL-007',
@@ -234,6 +275,7 @@ class DatabaseSeeder extends Seeder
           'gambar_barang' => '7.jpg',
           'id_kategori' => 'AC',
           'id_subkategori' => 'PSL',
+          'linktokped' => 'https://www.tokopedia.com/cvssd/kompresor-shark-auto-7-5hp-e-motor-lvpm-1075'
         ],
         [
             'id_barang' => 'AC-PSL-008',
@@ -243,6 +285,7 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '8.jpg',
             'id_kategori' => 'AC',
             'id_subkategori' => 'PSL',
+            'linktokped' => 'https://www.tokopedia.com/cvssd/kompresor-shark-auto-10hp-e-motor-lwpm-1010'
           ],
           [
             'id_barang' => 'AC-PSL-009',
@@ -252,88 +295,97 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '9.jpg',
             'id_kategori' => 'AC',
             'id_subkategori' => 'PSL',
+            'linktokped' => 'none'
           ],
         [
             'id_barang' => 'AC-UVL-001',
             'nama_barang' => 'LZU-5114 Kompresor 1/4 hp Unloading',
-            'harga_barang' => '1000',
+            'harga_barang' => '1215788',
             'deskripsi_barang' => 'des',
             'gambar_barang' => '1.jpg',
             'id_kategori' => 'AC',
             'id_subkategori' => 'UVL',
-            
+            'linktokped' => 'https://www.tokopedia.com/cvssd/kompresor-shark-unloading-0-25hp-lzu-5114'
         ],
         [
             'id_barang' => 'AC-UVL-002',
             'nama_barang' => 'LVU-5112 Kompresor 1/2 hp Unloading',
-            'harga_barang' => '1000',
+            'harga_barang' => '2255835',
             'deskripsi_barang' => 'des',
             'gambar_barang' => '2.jpg',
             'id_kategori' => 'AC',
             'id_subkategori' => 'UVL',
+            'linktokped' => 'https://www.tokopedia.com/cvssd/kompresor-shark-unloading-0-5hp-lvu-5112',
         ],
         [
             'id_barang' => 'AC-UVL-003',
             'nama_barang' => 'LVU-6501 Kompresor 1 hp Unloading',
-            'harga_barang' => '1000',
+            'harga_barang' => '3056940',
             'deskripsi_barang' => 'des',
             'gambar_barang' => '3.jpg',
             'id_kategori' => 'AC',
             'id_subkategori' => 'UVL',
+            'linktokped' => 'https://www.tokopedia.com/cvssd/kompresor-shark-unloading-1hp-lvu-6501',
         ],
         [
             'id_barang' => 'AC-UVL-004',
             'nama_barang' => 'LWU-6502 Kompresor 2 hp Unloading',
-            'harga_barang' => '1000',
+            'harga_barang' => '4802670',
             'deskripsi_barang' => 'des',
             'gambar_barang' => '4.jpg',
             'id_kategori' => 'AC',
             'id_subkategori' => 'UVL',
+            'linktokped' => 'https://www.tokopedia.com/cvssd/kompresor-shark-unloading-2hp-lwu-6502',
         ],
         [
             'id_barang' => 'AC-UVL-005',
             'nama_barang' => 'LVU-8003 Kompresor 3 hp Unloading',
-            'harga_barang' => '1000',
+            'harga_barang' => '7454250',
             'deskripsi_barang' => 'des',
             'gambar_barang' => '5.jpg',
             'id_kategori' => 'AC',
             'id_subkategori' => 'UVL',
+            'linktokped' => 'https://www.tokopedia.com/cvssd/kompresor-shark-unloading-3hp-lvu-8003',
         ],
         [
             'id_barang' => 'AC-UVL-006',
             'nama_barang' => 'LWU-8005 Kompresor 5 hp Unloading',
-            'harga_barang' => '1000',
+            'harga_barang' => '10082250',
             'deskripsi_barang' => 'des',
             'gambar_barang' => '6.jpg',
             'id_kategori' => 'AC',
             'id_subkategori' => 'UVL',
+            'linktokped' => 'https://www.tokopedia.com/cvssd/kompresor-shark-unloading-5hp-lwu-8005',
         ],
         [
             'id_barang' => 'AC-UVL-007',
             'nama_barang' => 'LVU-1075 Kompresor 7,5 hp Unloading',
-            'harga_barang' => '1000',
+            'harga_barang' => '16362000',
             'deskripsi_barang' => 'des',
             'gambar_barang' => '7.jpg',
             'id_kategori' => 'AC',
             'id_subkategori' => 'UVL',
+            'linktokped' => 'https://www.tokopedia.com/cvssd/kompresor-shark-unloading-7-5hp-lvu-1075',
         ],
         [
             'id_barang' => 'AC-UVL-008',
             'nama_barang' => 'LWU-1010 Kompresor 10 hp Unloading',
-            'harga_barang' => '1000',
+            'harga_barang' => '19354500',
             'deskripsi_barang' => 'des',
             'gambar_barang' => '8.jpg',
             'id_kategori' => 'AC',
             'id_subkategori' => 'UVL',
+            'linktokped' => 'https://www.tokopedia.com/cvssd/kompresor-shark-unloading-10hp-lwu-1010',
         ],
         [
             'id_barang' => 'AC-UVL-009',
             'nama_barang' => 'LWU-1215 Kompresor 15 hp Unloading',
-            'harga_barang' => '1000',
+            'harga_barang' => '24504750',
             'deskripsi_barang' => 'des',
             'gambar_barang' => '9.jpg',
             'id_kategori' => 'AC',
             'id_subkategori' => 'UVL',
+            'linktokped' => 'https://www.tokopedia.com/cvssd/kompresor-shark-unloading-15hp-lwu-1215',
         ],
         [
             'id_barang' => 'AC-JSE-001',
@@ -343,7 +395,7 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '1.jpg',
             'id_kategori' => 'AC',
             'id_subkategori' => 'JSE',
-            'linktokped' => 'https://www.tokopedia.com/cvssd/kompresor-shark-auto-0-25hp-e-motor-lvpm-5114'
+            'linktokped' => 'https://www.tokopedia.com/cvssd/kompresor-shark-unloading-0-25hp-ge-shark-se-162-s-jzue-5114'
         ],
         [
             'id_barang' => 'AC-JSE-002',
@@ -353,6 +405,7 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '2.jpg',
             'id_kategori' => 'AC',
             'id_subkategori' => 'JSE',
+            'linktokped' => 'https://www.tokopedia.com/cvssd/kompresor-shark-unloading-0-5hp-ge-shark-se162s-jvue-5112'
         ],
         [
             'id_barang' => 'AC-JSE-003',
@@ -362,6 +415,7 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '3.jpg',
             'id_kategori' => 'AC',
             'id_subkategori' => 'JSE',
+            'linktokped' => 'https://www.tokopedia.com/cvssd/kompresor-shark-unloading-1hp-ge-shark-se168x-jvue-6501'
         ],
         [
             'id_barang' => 'AC-JSE-004',
@@ -371,6 +425,7 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '4.jpg',
             'id_kategori' => 'AC',
             'id_subkategori' => 'JSE',
+            'linktokped' => 'https://www.tokopedia.com/cvssd/kompresor-shark-unloading-2hp-ge-shark-se168x-jvue-6502'
         ],
         [
             'id_barang' => 'AC-JSE-005',
@@ -380,6 +435,7 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '5.jpg',
             'id_kategori' => 'AC',
             'id_subkategori' => 'JSE',
+            'linktokped' => 'https://www.tokopedia.com/cvssd/kompresor-shark-unloading-0-25hp-65l-ge-shark-se162s-jzue-5114-new'
         ],
         [
             'id_barang' => 'AC-POR-001',
@@ -389,6 +445,7 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '1.jpg',
             'id_kategori' => 'AC',
             'id_subkategori' => 'POR',
+            'linktokped' => 'none'
         ],
         [
             'id_barang' => 'AC-POR-002',
@@ -398,6 +455,7 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '2.jpg',
             'id_kategori' => 'AC',
             'id_subkategori' => 'POR',
+            'linktokped' => 'none'
         ],
         [
             'id_barang' => 'AC-POR-003',
@@ -407,15 +465,17 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '3.jpg',
             'id_kategori' => 'AC',
             'id_subkategori' => 'POR',
+            'linktokped' => 'none'
         ],
         [
             'id_barang' => 'AC-SNW-001',
             'nama_barang' => 'SSW-12L Snowash 12 Liter',
-            'harga_barang' => '1000',
+            'harga_barang' => '3962483',
             'deskripsi_barang' => 'des',
             'gambar_barang' => '1.jpg',
             'id_kategori' => 'AC',
             'id_subkategori' => 'SNW',
+            'linktokped' => 'https://www.tokopedia.com/cvssd/kompresor-snowash-shark-12l-0-25hp',
         ],
         [
             'id_barang' => 'AC-SNW-002',
@@ -425,6 +485,7 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '2.jpg',
             'id_kategori' => 'AC',
             'id_subkategori' => 'SNW',
+            'linktokped' => 'none'
         ],
         [
             'id_barang' => 'TO-TOP-001',
@@ -434,6 +495,7 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '2.jpg',
             'id_kategori' => 'TO',
             'id_subkategori' => 'TOP',
+            'linktokped' => 'none'
         ],
         [
             'id_barang' => 'PS-PSP-001',
@@ -443,6 +505,7 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '1.jpg',
             'id_kategori' => 'PS',
             'id_subkategori' => 'PSP',
+            'linktokped' => 'none'
         ],
         [
             'id_barang' => 'PS-PSP-002',
@@ -452,6 +515,7 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '1.jpg',
             'id_kategori' => 'PS',
             'id_subkategori' => 'PSP',
+            'linktokped' => 'none'
         ],
         [
             'id_barang' => 'DE-STD-001',
@@ -461,6 +525,7 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '1.jpg',
             'id_kategori' => 'DE',
             'id_subkategori' => 'STD',
+            'linktokped' => 'none'
         ],
         [
             'id_barang' => 'DE-STD-002',
@@ -470,6 +535,7 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '2.jpg',
             'id_kategori' => 'DE',
             'id_subkategori' => 'STD',
+            'linktokped' => 'none'
         ],
         [
             'id_barang' => 'DE-STD-003',
@@ -479,6 +545,7 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '3.jpg',
             'id_kategori' => 'DE',
             'id_subkategori' => 'STD',
+            'linktokped' => 'none'
         ],
         [
             'id_barang' => 'DE-STD-004',
@@ -488,6 +555,7 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '4.jpg',
             'id_kategori' => 'DE',
             'id_subkategori' => 'STD',
+            'linktokped' => 'none'
         ],
         [
             'id_barang' => 'DE-STD-005',
@@ -497,6 +565,7 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '5.jpg',
             'id_kategori' => 'DE',
             'id_subkategori' => 'STD',
+            'linktokped' => 'none'
         ],
         [
             'id_barang' => 'DE-STD-006',
@@ -506,6 +575,7 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '6.jpg',
             'id_kategori' => 'DE',
             'id_subkategori' => 'STD',
+            'linktokped' => 'none'
         ],
         [
             'id_barang' => 'DE-STD-007',
@@ -515,6 +585,7 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '7.jpg',
             'id_kategori' => 'DE',
             'id_subkategori' => 'STD',
+            'linktokped' => 'none'
         ],
         [
             'id_barang' => 'DE-STD-008',
@@ -524,6 +595,7 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '8.jpg',
             'id_kategori' => 'DE',
             'id_subkategori' => 'STD',
+            'linktokped' => 'none'
         ],
         [
             'id_barang' => 'DE-PRE-001',
@@ -533,6 +605,7 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '3.jpg',
             'id_kategori' => 'DE',
             'id_subkategori' => 'PRE',
+            'linktokped' => 'none'
         ],
         [
             'id_barang' => 'DE-PRE-002',
@@ -542,33 +615,37 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '2.jpg',
             'id_kategori' => 'DE',
             'id_subkategori' => 'PRE',
+            'linktokped' => 'none'
         ],
         [
             'id_barang' => 'GE-STGE-001',
             'nama_barang' => 'Gasoline Engine SE 162s (5,5 hp)',
-            'harga_barang' => '8468850',
+            'harga_barang' => '1153521',
             'deskripsi_barang' => 'des',
             'gambar_barang' => '3.jpg',
             'id_kategori' => 'GE',
             'id_subkategori' => 'STGE',
+            'linktokped' => 'https://www.tokopedia.com/cvssd/gasoline-engine-shark-se-162-s-se162s',
         ],
         [
             'id_barang' => 'GE-STGE-002',
             'nama_barang' => 'Gasoline Engine SE 168X (6,5 hp)',
-            'harga_barang' => '8468850',
+            'harga_barang' => '1310475',
             'deskripsi_barang' => 'des',
             'gambar_barang' => '2.jpg',
             'id_kategori' => 'GE',
             'id_subkategori' => 'STGE',
+            'linktokped' => 'https://www.tokopedia.com/cvssd/gasoline-engine-shark-se-168-x-se168x',
         ],
         [
-            'id_barang' => 'GE-STGE-002',
-            'nama_barang' => 'Gasoline Engine SE 168X (6,5 hp)',
+            'id_barang' => 'GE-STGE-003',
+            'nama_barang' => 'Gasoline Engine SP 200 (6,5 HP)',
             'harga_barang' => '8468850',
             'deskripsi_barang' => 'des',
-            'gambar_barang' => '2.jpg',
+            'gambar_barang' => '1.jpg',
             'id_kategori' => 'GE',
             'id_subkategori' => 'STGE',
+            'linktokped' => 'none'
         ],
         [
             'id_barang' => 'GE-PGE-001',
@@ -578,24 +655,27 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '1.jpg',
             'id_kategori' => 'GE',
             'id_subkategori' => 'PGE',
+            'linktokped' => 'none',
         ],
         [
             'id_barang' => 'WP-STW-001',
             'nama_barang' => 'Water Pump SWP 50-30 2 inch',
-            'harga_barang' => '8468850',
+            'harga_barang' => '1776338',
             'deskripsi_barang' => 'des',
             'gambar_barang' => '1.jpg',
             'id_kategori' => 'WP',
             'id_subkategori' => 'STW',
+            'linktokped' => 'https://www.tokopedia.com/cvssd/water-pump-shark-swp-50-30-swp50-30-2-inch',
         ],
         [
             'id_barang' => 'WP-STW-002',
             'nama_barang' => 'Water Pump SWP 80-30 3 inch',
-            'harga_barang' => '8468850',
+            'harga_barang' => '1938443',
             'deskripsi_barang' => 'des',
             'gambar_barang' => '2.jpg',
             'id_kategori' => 'WP',
             'id_subkategori' => 'STW',
+            'linktokped' => 'https://www.tokopedia.com/cvssd/water-pump-shark-swp-80-30-swp80-30-3-inch',
         ],
         [
             'id_barang' => 'WP-PWP-001',
@@ -605,6 +685,7 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '5.jpg',
             'id_kategori' => 'WP',
             'id_subkategori' => 'PWP',
+            'linktokped' => 'none',
         ],
         [
             'id_barang' => 'WP-PWP-002',
@@ -614,6 +695,7 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '3.jpg',
             'id_kategori' => 'WP',
             'id_subkategori' => 'PWP',
+            'linktokped' => 'none',
         ],
         [
             'id_barang' => 'WP-PWP-003',
@@ -623,6 +705,357 @@ class DatabaseSeeder extends Seeder
             'gambar_barang' => '4.jpg',
             'id_kategori' => 'WP',
             'id_subkategori' => 'PWP',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'SG-SGG-001',
+            'nama_barang' => 'Gasoline Generator SG 1500X (1000 W)',
+            'harga_barang' => '2302800',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '1.jpg',
+            'id_kategori' => 'SG',
+            'id_subkategori' => 'SGG',
+            'linktokped' => 'https://www.tokopedia.com/cvssd/gasoline-generator-shark-sg-1500-x-sg1500x-1kw'
+        ],
+        [
+            'id_barang' => 'SG-SGG-002',
+            'nama_barang' => 'Gasoline Generator SG 3000X (2000 W)',
+            'harga_barang' => '3720900',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '2.jpg',
+            'id_kategori' => 'SG',
+            'id_subkategori' => 'SGG',
+            'linktokped' => 'https://www.tokopedia.com/cvssd/gasoline-generator-shark-sg-3000-x-sg3000x-2kw'
+        ],
+        [
+            'id_barang' => 'SG-SGG-003',
+            'nama_barang' => 'Gasoline Generator SG 4000X (2500 W)',
+            'harga_barang' => '3880673',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '3.jpg',
+            'id_kategori' => 'SG',
+            'id_subkategori' => 'SGG',
+            'linktokped' => 'https://www.tokopedia.com/cvssd/gasoline-generator-shark-sg-4000-x-sg4000x-2-5kw'
+        ],
+        [
+            'id_barang' => 'SG-SGG-004',
+            'nama_barang' => 'Gasoline Generator SG 7500X (5000 W)',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '4.jpg',
+            'id_kategori' => 'SG',
+            'id_subkategori' => 'SGG',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'SG-SGG-005',
+            'nama_barang' => 'Gasoline Generator SG 10000X (6500 W - 7000 W)',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '5.jpg',
+            'id_kategori' => 'SG',
+            'id_subkategori' => 'SGG',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'AC-AMS-001',
+            'nama_barang' => 'MZPM-5114 Kompresor 1/4 hp Auto+Motor',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '1.jpg',
+            'id_kategori' => 'AC',
+            'id_subkategori' => 'AMS',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'AC-AMS-002',
+            'nama_barang' => 'MVPM-5112 Kompresor 1/2 hp Auto+Motor',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '2.jpg',
+            'id_kategori' => 'AC',
+            'id_subkategori' => 'AMS',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'AC-AMS-003',
+            'nama_barang' => 'MVPM-5501 Kompresor 1 hp Auto+Motor',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '3.jpg',
+            'id_kategori' => 'AC',
+            'id_subkategori' => 'AMS',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'AC-AMS-004',
+            'nama_barang' => 'MVPM-6502 Kompresor 2 hp Auto+Motor',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '4.jpg',
+            'id_kategori' => 'AC',
+            'id_subkategori' => 'AMS',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'AC-AUS-001',
+            'nama_barang' => 'MZU-5114 Kompresor 1/4 hp Unloading',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '5.jpg',
+            'id_kategori' => 'AC',
+            'id_subkategori' => 'AUS',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'AC-AUS-002',
+            'nama_barang' => 'MVU-5112 Kompresor 1/2 hp Unloading',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '6.jpg',
+            'id_kategori' => 'AC',
+            'id_subkategori' => 'AUS',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'AC-AUS-003',
+            'nama_barang' => 'MVU-5501 Kompresor 1 hp Unloading',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '7.jpg',
+            'id_kategori' => 'AC',
+            'id_subkategori' => 'AUS',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'AC-AUS-004',
+            'nama_barang' => 'MVU-6502 Kompressor 2 hp Unloading',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '8.jpg',
+            'id_kategori' => 'AC',
+            'id_subkategori' => 'AUS',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'AC-JJS-001',
+            'nama_barang' => 'MZUE-5114 Komp. 1/4 hp Unloading+Engine',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '1.jpg',
+            'id_kategori' => 'AC',
+            'id_subkategori' => 'JJS',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'AC-JJS-002',
+            'nama_barang' => 'MVUE-5112 Komp. 1/2 hp Unloading + Engine',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '2.jpg',
+            'id_kategori' => 'AC',
+            'id_subkategori' => 'JJS',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'AC-JJS-003',
+            'nama_barang' => 'MVUE-5501 Komp. 1 hp Unloading + Engine',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '3.jpg',
+            'id_kategori' => 'AC',
+            'id_subkategori' => 'JJS',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'AC-JJS-004',
+            'nama_barang' => 'MVUE-6502 Komp. 2 hp Unloading + Engine',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '4.jpg',
+            'id_kategori' => 'AC',
+            'id_subkategori' => 'JJS',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'AC-POS-001',
+            'nama_barang' => 'SDP 0710 Portable Compressor 3/4HP - 10L',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '1.jpg',
+            'id_kategori' => 'AC',
+            'id_subkategori' => 'POS',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'AC-POS-002',
+            'nama_barang' => 'SDP 0725 Portable Compressor 3/4HP - 25L',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '2.jpg',
+            'id_kategori' => 'AC',
+            'id_subkategori' => 'POS',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'GE-SDGE-001',
+            'nama_barang' => 'Gasoline Engine SDP 160 (5,5 hp)',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '1.jpg',
+            'id_kategori' => 'GE',
+            'id_subkategori' => 'SDGE',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'GE-SDGE-002',
+            'nama_barang' => 'Gasoline Engine SDP 200 (6,5 hp)',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '2.jpg',
+            'id_kategori' => 'GE',
+            'id_subkategori' => 'SDGE',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'WP-SDPW-001',
+            'nama_barang' => 'Water Pump SDP 2 inch',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '1.jpg',
+            'id_kategori' => 'WP',
+            'id_subkategori' => 'SDPW',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'WP-SDPW-002',
+            'nama_barang' => 'Water Pump SDP 3 inch',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '2.jpg',
+            'id_kategori' => 'WP',
+            'id_subkategori' => 'SDPW',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'GG-SDGG-002',
+            'nama_barang' => 'Gasoline Generator SDP-2400 (2000 W)',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '2.jpg',
+            'id_kategori' => 'GG',
+            'id_subkategori' => 'SDGG',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'GG-SDGG-003',
+            'nama_barang' => 'Gasoline Generator SDP-2500 (2000 W)',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '3.jpg',
+            'id_kategori' => 'GG',
+            'id_subkategori' => 'SDGG',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'GG-SDGG-004',
+            'nama_barang' => 'Gasoline Generator SDP-7000 (5000 W - 5500 W)',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '4.jpg',
+            'id_kategori' => 'GG',
+            'id_subkategori' => 'SDGG',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'EL-SEL-001',
+            'nama_barang' => 'Elektro Motor 1 Phase 1/4HP 4P Fetch',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '1.jpg',
+            'id_kategori' => 'EL',
+            'id_subkategori' => 'SEL',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'EL-SEL-002',
+            'nama_barang' => 'Elektro Motor 1 Phase 1/2HP 4P Fetch',
+            'harga_barang' => '918848',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '1.jpg',
+            'id_kategori' => 'EL',
+            'id_subkategori' => 'SEL',
+            'linktokped' => 'https://www.tokopedia.com/cvssd/elektromotor-fetch-1-phase-0-5hp-4p',
+        ],
+        [
+            'id_barang' => 'EL-SEL-003',
+            'nama_barang' => 'Elektro Motor 1 Phase 1 HP 4P Fetch',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '1.jpg',
+            'id_kategori' => 'EL',
+            'id_subkategori' => 'SEL',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'EL-SEL-004',
+            'nama_barang' => 'Elektro Motor 1 Phase 2 HP 4P Fetch',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '1.jpg',
+            'id_kategori' => 'EL',
+            'id_subkategori' => 'SEL',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'EL-SEL-005',
+            'nama_barang' => 'Elektro Motor 1 Phase 3 HP 4P Fetch',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '2.jpg',
+            'id_kategori' => 'EL',
+            'id_subkategori' => 'SEL',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'EL-SEL-006',
+            'nama_barang' => 'Elektro Motor 1 Phase 5 HP 4P Fetch',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '2.jpg',
+            'id_kategori' => 'EL',
+            'id_subkategori' => 'SEL',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'EL-SEL-007',
+            'nama_barang' => 'Elektro Motor 1 Phase 7.5 HP 4P Fetch',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '2.jpg',
+            'id_kategori' => 'EL',
+            'id_subkategori' => 'SEL',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'EL-SEL-008',
+            'nama_barang' => 'Elektro Motor 1 Phase 10 HP 4P Fetch',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '2.jpg',
+            'id_kategori' => 'EL',
+            'id_subkategori' => 'SEL',
+            'linktokped' => 'none',
+        ],
+        [
+            'id_barang' => 'EL-SEL-009',
+            'nama_barang' => 'Elektro Motor 1 Phase 15 HP 4P Fetch',
+            'harga_barang' => '8468850',
+            'deskripsi_barang' => '',
+            'gambar_barang' => '2.jpg',
+            'id_kategori' => 'EL',
+            'id_subkategori' => 'SEL',
+            'linktokped' => 'none',
         ],
         ]
     );
