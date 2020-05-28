@@ -21,7 +21,7 @@ class CreateBarangTable extends Migration
             $table->text('gambar_barang')->nullable();
             $table->string('id_kategori');
             $table->string('id_subkategori');
-            $table->string('linktokped')->default('none');
+            $table->string('linktokped')->nullable();
             $table->tinyInteger('status_barang',0)->default('1')->unsigned();  
         });
     }
