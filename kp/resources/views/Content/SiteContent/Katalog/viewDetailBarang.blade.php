@@ -37,14 +37,20 @@
                             <a href="#"> <span>Availibility</span> : In Stock</a>
                         </li>
                     </ul>
-                    <p>
-                        First replenish living. Creepeth image image. Creeping can't, won't called.
-                        Two fruitful let days signs sea together all land fly subdue
-                    </p>
                     <div class="card_area d-flex justify-content-between align-items-center">
                         <a href="https://api.whatsapp.com/send?phone=6281803020696&text=Saya%20ingin%20bertanya%20tentang%20ketersediaan%20barang%20{{$daftarBarang->nama_barang}}%20di%20toko%20ini.%20Mohon%20Bantuannya."
                             class="btn_3" target="_blank">Contact the seller</a>
+                        @if ($daftarBarang->linktokped == "none" || $daftarBarang->linktokped == null)
+                        
+                        @else
+                            {{-- <div class="card_area d-flex justify-content-between align-items-center"> --}}
+                                <a href="{{$daftarBarang->linktokped}}"
+                                    class="btn_3" target="_blank">Avaiable in tokopedia</a>
+                            {{-- </div> --}}
+                        @endif
                     </div>
+                    
+                    
                 </div>
             </div>
         </div>
