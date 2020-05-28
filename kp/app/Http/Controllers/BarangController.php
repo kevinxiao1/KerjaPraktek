@@ -119,7 +119,7 @@ class BarangController extends Controller
         }
         
         // $filesize = $file->getSize();
-        
+        $url = $request->only('redirects_to');
         $barang = barang::find($request->key);
         $barang->id_barang = $request->idBarang;
         $barang->nama_barang = $request->namaBarang;
@@ -134,7 +134,8 @@ class BarangController extends Controller
             if ($file != null) {
                 $file->move($destinationPath.$request->idBarang.'/','profil.jpg');
             }
-            return redirect()->route('viewBarang')->with('messages','Barang berhasil diganti');
+            return redirect()->to($url['redirects_to'])->with('messages','Barang berhasil diganti');
+            // return redirect()->route('viewBarang')->with('messages','Barang berhasil diganti');
         }
         else{
         }

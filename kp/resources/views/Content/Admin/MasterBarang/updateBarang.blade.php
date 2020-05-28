@@ -85,6 +85,8 @@
 
           <div class="card-footer">
             <input type="hidden" name="key" value="{{ $daftarBarang['id_barang'] }}">
+            <input type="hidden" name="redirects_to" value="{{ url()->previous() }}">
+            {{-- {!! Form::hidden('redirects_to', URL::previous()) !!} --}}
             <button type="submit" class="btn btn-primary">Submit</button>
           </div>
         </form>

@@ -11,11 +11,10 @@
                             <div class="col-lg-5 col-md-8">
                                 <div class="banner_text">
                                     <div class="banner_text_iner">
-                                        <h1>Wood & Cloth
-                                            Sofa</h1>
-                                        <p>Incididunt ut labore et dolore magna aliqua quis ipsum
-                                            suspendisse ultrices gravida. Risus commodo viverra</p>
-                                        <a href="#" class="btn_2">buy now</a>
+                                        <h1>Welcome!
+                                            </h1>
+                                        <p>Start browsing our products here !</p>
+                                        <a href="/products" class="btn_2">Browse Products</a>
                                     </div>
                                 </div>
                             </div>
@@ -29,10 +28,8 @@
                             <div class="col-lg-5 col-md-8">
                                 <div class="banner_text">
                                     <div class="banner_text_iner">
-                                        <h1>Cloth & Wood
-                                            Sofa</h1>
-                                        <p>Incididunt ut labore et dolore magna aliqua quis ipsum
-                                            suspendisse ultrices gravida. Risus commodo viverra</p>
+                                        <h1>Start Transaction Online sub</h1>
+                                        <p>Visit our Tokopedia store from here!</p>
                                         <a href="#" class="btn_2">buy now</a>
                                     </div>
                                 </div>
@@ -42,7 +39,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="single_banner_slider">
+                    {{-- <div class="single_banner_slider">
                         <div class="row">
                             <div class="col-lg-5 col-md-8">
                                 <div class="banner_text">
@@ -59,7 +56,7 @@
                                 <img src="{{asset('Site/img/banner3.png')}}" alt="">
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <!-- <div class="single_banner_slider">
                                 <div class="row">
                                     <div class="col-lg-5 col-md-8">
@@ -362,8 +359,12 @@
         
         <div class="col-lg-8">
             <div class="d-none d-sm-block mb-5 pb-4">
-                <div id="map" style="height: 480px;"></div>
-                <script>
+                
+                <div id="map" style="height: 480px;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.953947495036!2d112.69080961472243!3d-7.246081594769357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7ff836164d45b%3A0xae9f8cc43d2c5519!2sCV.%20Sinar%20Surya%20Diesel!5e0!3m2!1sen!2sid!4v1590641478443!5m2!1sen!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                
+                {{-- <script>
                   function initMap() {
                     var uluru = {
                       lat: -25.363,
@@ -388,10 +389,10 @@
                     ];
                     var map = new google.maps.Map(document.getElementById('map'), {
                       center: {
-                        lat: -31.197,
-                        lng: 150.744
+                        lat: -7.245858,
+                        lng: 112.693041
                       },
-                      zoom: 9,
+                      zoom: 15,
                       styles: grayStyles,
                       scrollwheel: false
                     });
@@ -399,7 +400,7 @@
                 </script>
                 <script
                   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I&callback=initMap">
-                </script>
+                </script> --}}
         
               </div>
         </div>

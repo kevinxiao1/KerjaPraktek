@@ -49,12 +49,16 @@ class siteController extends Controller
         ->paginate(6);
         $daftarKategori = kategori::all();
         $daftarSubKategori = subkategori::all();
+        $kategoriTerpilih = "";
+        $subKategoriTerpilih = "";
         // $jumlahBarang = DB::table('barang')->count();
         return view('Content.SiteContent.Katalog.viewKatalog',
         [
             'daftarBarang' => $daftarBarang,
             'daftarKategori' => $daftarKategori,
             'daftarSubKategori' => $daftarSubKategori,
+            'kategoriTerpilih' => $kategoriTerpilih,
+            'subKategoriTerpilih' => $subKategoriTerpilih,
             // 'jumlahBarang' => $jumlahBarang,
         ]);
     }
