@@ -63,7 +63,13 @@
                 </div>
               </div>
             </div>
-            
+            <div class="form-group">
+              <label for="linkBarang">Link Barang</label>
+              <input type="text" name="linkBarang" class="form-control" id="linkBarang" placeholder="Masukan Link Tokopedia Barang">
+                @if ($errors->has('linkBarang'))
+                  <span class="help-block">{{$errors->first('linkBarang','Field tidak boleh kosong')}}</span>
+                @endif  
+            </div>
           </div>
           <!-- /.card-body -->
 

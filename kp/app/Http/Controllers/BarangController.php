@@ -56,6 +56,7 @@ class BarangController extends Controller
         $barang->id_barang = $request->idBarang;
         $barang->nama_barang = $request->namaBarang;
         $barang->harga_barang = $request->hargaBarang;
+        $barang->linktokped = $request->linkBarang;
         $barang->deskripsi_barang = $request->deskripsiBarang;
         $barang->gambar_barang = $request->gambarBarang->getClientOriginalName();
         $barang->id_kategori = $request->kategori;
@@ -106,6 +107,7 @@ class BarangController extends Controller
             'namaBarang' => 'required',
             'hargaBarang' => 'required',
             'deskripsiBarang' => 'required',
+            'linkBarang' => 'required',
         ]);
         // $request->file('gambarBarang')->store('Gambar');
         // $request->gambarBarang->storeAs('Gambar/'.$request->idBarang, $request->gambarBarang->getClientOriginalName());
@@ -124,6 +126,7 @@ class BarangController extends Controller
         $barang->id_barang = $request->idBarang;
         $barang->nama_barang = $request->namaBarang;
         $barang->harga_barang = $request->hargaBarang;
+        $barang->linktokped = $request->linkBarang;
         $barang->deskripsi_barang = $request->deskripsiBarang;
         if ($file != null) {
             $barang->gambar_barang = $request->gambarBarang->getClientOriginalName();

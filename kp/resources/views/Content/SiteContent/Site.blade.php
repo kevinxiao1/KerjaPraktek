@@ -28,7 +28,7 @@
                             <div class="col-lg-5 col-md-8">
                                 <div class="banner_text">
                                     <div class="banner_text_iner">
-                                        <h1>Start Transaction Online sub</h1>
+                                        <h1>Start Transaction Online</h1>
                                         <p>Visit our Tokopedia store from here!</p>
                                         <a href="#" class="btn_2">buy now</a>
                                     </div>
