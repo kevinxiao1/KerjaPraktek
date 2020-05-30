@@ -30,7 +30,7 @@
                                     <div class="banner_text_iner">
                                         <h1>Start Transaction Online</h1>
                                         <p>Visit our Tokopedia store from here!</p>
-                                        <a href="#" class="btn_2">buy now</a>
+                                        <a href="https://www.tokopedia.com/cvssd?source=universe&st=product" class="btn_2">buy now</a>
                                     </div>
                                 </div>
                             </div>
@@ -103,41 +103,41 @@
             <div class="col-lg-5 col-sm-6">
                 <div class="single_feature_post_text">
                     <p>Best Quality</p>
-                    <h3>Tyre Opener</h3>
-                    <a href="/products/kategori/TO" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
+                    <h3>Elektro Motor</h3>
+                    <a href="/products/kategori/EL" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
                     <img src="{{asset('/Site/img/feature/feature_2.png')}}" alt="">
                 </div>
             </div>
             <div class="col-lg-5 col-sm-6">
                 <div class="single_feature_post_text">
                     <p>Best Quality</p>
-                    <h3>Snowash</h3>
-                    <a href="#" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
+                    <h3>Tyre Opener</h3>
+                    <a href="/products/kategori/TO" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
                 <img src="{{asset('/Site/img/feature/feature_3.png')}}" alt="">
                 </div>
             </div>
             <div class="col-lg-7 col-sm-6">
                 <div class="single_feature_post_text">
                     <p>Best Quality</p>
-                    <h3>Diesel</h3>
-                    <a href="/products/kategori/DE" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
+                    <h3>Gasoline Generator</h3>
+                    <a href="/products/kategori/GG" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
                     <img src="{{asset('/Site/img/feature/feature_4.png')}}" alt="">
                 </div>
             </div>
             <div class="col-lg-7 col-sm-6">
                 <div class="single_feature_post_text">
                     <p>Best Quality</p>
-                    <h3>Gasoline</h3>
+                    <h3>Gasoline Engine</h3>
                     <a href="/products/kategori/GE" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
-                    <img src="{{asset('/Site/img/feature/feature_1.png')}}" alt="">
+                    <img src="{{asset('/Site/img/feature/feature_5.png')}}" alt="">
                 </div>
             </div>
             <div class="col-lg-5 col-sm-6">
                 <div class="single_feature_post_text">
                     <p>Best Quality</p>
-                    <h3>Premium</h3>
-                    <a href="#" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
-                    <img src="{{asset('/Site/img/feature/feature_2.png')}}" alt="">
+                    <h3>Diesel Engine</h3>
+                    <a href="/products/kategori/DE" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
+                    <img src="{{asset('/Site/img/feature/feature_6.png')}}" alt="">
                 </div>
             </div>
         </div>
