@@ -95,7 +95,7 @@
             <div class="col-lg-7 col-sm-6">
                 <div class="single_feature_post_text">
                     <p>Best Quality</p>
-                    <h3>Air Compressor SDP</h3>
+                    <h3>Air Compressor</h3>
                     <a href="/products/kategori/AC" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
                     <img src="{{asset('/Site/img/feature/feature_1.png')}}" alt="">
                 </div>

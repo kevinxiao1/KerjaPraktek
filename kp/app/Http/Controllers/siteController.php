@@ -71,7 +71,7 @@ class siteController extends Controller
         // $jumlahBarang = DB::table('barang')->count();
         // $sub = kategori::find($kategori);
         $kategoriTerpilih = $kategori;
-        $subKategoriTerpilih = "";
+        $subKategoriTerpilih = $daftarSubKategori;
         return view('Content.SiteContent.Katalog.viewKatalog',
         [
             'daftarBarang' => $daftarBarang,
