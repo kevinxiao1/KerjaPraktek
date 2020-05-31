@@ -419,13 +419,13 @@
               <p>Mon to Fri 8am to 5pm</p>
             </div>
           </div>
-          {{-- <div class="media contact-info">
+          <div class="media contact-info">
             <span class="contact-info__icon"><i class="ti-email"></i></span>
             <div class="media-body">
-              <h3>support@colorlib.com</h3>
-              <p>Send us your query anytime!</p>
+              <h3>sinarsuryadiesel@gmail.com</h3>
+              <p>Mon to Fri 8am to 5pm</p>
             </div>
-          </div> --}}
+          </div>
         </div>
       </div>
     </div>
