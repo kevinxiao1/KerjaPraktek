@@ -70,8 +70,9 @@
         <div class="container">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" id="home-tab" data-toggle="tab" role="tab"
-                        aria-controls="home" aria-selected="true">Description</a>
+                    <h1>Descrition</h1>
+                    {{-- <a class="nav-link active" id="home-tab" data-toggle="tab" role="tab"
+                        aria-controls="home" aria-selected="true">Description</a> --}}
                 </li>
                 {{-- <li class="nav-item">
                 <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"

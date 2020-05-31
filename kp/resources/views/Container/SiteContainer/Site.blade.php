@@ -161,16 +161,16 @@
                         <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a style="font-size: 17pt" class="nav-link" href="{{url('/#home')}}">Home</a>
+                                    <a onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'" style="font-size: 17pt" class="nav-link" href="{{url('/#home')}}">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a style="font-size: 17pt" class="nav-link" href="{{url('/#category')}}">Featured Category</a>
+                                    <a onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'" style="font-size: 17pt" class="nav-link" href="{{url('/#category')}}">Featured Category</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a style="font-size: 17pt" class="nav-link" href="{{url('/#product')}}">Our Product</a>
+                                    <a onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'" style="font-size: 17pt" class="nav-link" href="{{url('/#product')}}">Our Product</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a style="font-size: 17pt" class="nav-link" href="{{url('/#contact')}}">Contact Us</a>
+                                    <a onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'" style="font-size: 17pt" class="nav-link" href="{{url('/#contact')}}">Contact Us</a>
                                 </li>
                             </ul>
                         </div>
