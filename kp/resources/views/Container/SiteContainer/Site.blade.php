@@ -151,7 +151,7 @@
                 <div class="col-lg-12">
 
                     <nav class="navbar navbar-expand-lg navbar-light ">
-                        <a class="navbar-brand" href="/"> <img src="{{asset('Site/img/logo.png')}}" alt="logo"> </a>
+                        <a class="navbar-brand" href="/"> <img width="250px" src="{{asset('Site/img/logo.png')}}" alt="logo"> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -161,16 +161,16 @@
                         <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{url('/#home')}}">Home</a>
+                                    <a style="font-size: 17pt" class="nav-link" href="{{url('/#home')}}">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{url('/#category')}}">Featured Category</a>
+                                    <a style="font-size: 17pt" class="nav-link" href="{{url('/#category')}}">Featured Category</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{url('/#product')}}">Our Product</a>
+                                    <a style="font-size: 17pt" class="nav-link" href="{{url('/#product')}}">Our Product</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{url('/#contact')}}">Contact Us</a>
+                                    <a style="font-size: 17pt" class="nav-link" href="{{url('/#contact')}}">Contact Us</a>
                                 </li>
                             </ul>
                         </div>

@@ -25,18 +25,23 @@
                 <div class="s_product_text">
                     <h3>{{$daftarBarang->nama_barang}}</h3>
                     <ul class="list">
-                        <li>
+                        <li style="font-size: 13pt">
                             <a class="active" href="/products/kategori/{{$daftarBarang->id_kategori}}">
                                 <span>Category</span> : {{$daftarBarang->Kategori->nama_kategori}}</a>
                         </li>
-                        <li>
+                        <hr>
+
+                        <li style="font-size: 13pt">
                             <a class="active" href="/products/subkategori/{{$daftarBarang->id_subkategori}}">
                                 <span>Subcategory</span> : {{$daftarBarang->Subkategori->nama_subkategori}}</a>
                         </li>
-                        <li>
+                        <hr>
+                        
+                        <li style="font-size: 13pt">
                             <a href="#"> <span>Availibility</span> : In Stock</a>
                         </li>
-                        <li>
+                        <hr>
+                        <li style="font-size: 13pt; vertical-align: center">
                             <a href="#"> <span>Price</span> : Rp.{{number_format($daftarBarang->harga_barang,2,",",".") }}</a>
                         </li>
                     </ul>
@@ -48,7 +53,7 @@
                         @else
                             {{-- <div class="card_area d-flex justify-content-between align-items-center"> --}}
                                 <a href="{{$daftarBarang->linktokped}}"
-                                    class="btn_3" target="_blank">Avaiable in tokopedia</a>
+                                    class="btn_3" style="background-color: green" target="_blank">Avaiable in tokopedia</a>
                             {{-- </div> --}}
                         @endif
                     </div>
@@ -65,7 +70,7 @@
         <div class="container">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" role="tab"
                         aria-controls="home" aria-selected="true">Description</a>
                 </li>
                 {{-- <li class="nav-item">
