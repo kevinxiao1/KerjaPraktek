@@ -11,13 +11,13 @@
         <form action="{{ route('doCreateBarang')}}" method="post" enctype="multipart/form-data">
           @csrf
           <div class="card-body">
-            <div class="form-group">
+            {{-- <div class="form-group">
               <label for="idBarang">ID Barang</label>
               <input type="text" name="idBarang" class="form-control" id="idBarang" placeholder="Masukan Id Barang">
                 @if ($errors->has('idBarang'))
                   <span class="help-block">{{$errors->first('idBarang','Field tidak boleh kosong')}}</span>
                 @endif
-            </div>
+            </div> --}}
             <div class="form-group">
               <label for="namaBarang">Nama Barang</label>
               <input type="text" name="namaBarang" class="form-control" id="namaBarang" placeholder="Masukan Nama Barang">

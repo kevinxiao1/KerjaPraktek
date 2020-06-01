@@ -37,7 +37,7 @@ class BarangController extends Controller
     public function doCreateBarang(Request $request)
     {
         $this->validate($request, [
-            'idBarang' => 'required',
+            // 'idBarang' => 'required',
             'namaBarang' => 'required',
             'hargaBarang' => 'required',
             'deskripsiBarang' => 'required',
@@ -46,6 +46,16 @@ class BarangController extends Controller
         // $request->gambarBarang->storeAs('Gambar/'.$request->idBarang, $request->gambarBarang->getClientOriginalName());
         // Storage::disk('public')->put($request->gambarBarang->getClientOriginalName(), $request->gambarBarang);
         // Storage::putFile('Gambar', $request->file('gambarBarang'));
+        
+        $angka = DB::table('barang')
+        ->where('id_kategori', 'LIKE', "%{$request->kategori}%")
+        ->where('id_subKategori', 'LIKE', "%{$request->subKategori}%")
+        ->count();
+        // dd($listBarang);
+
+        $idBarang = $request->kategori."-".$request->subKategori."-".str_pad($angka+1, 3, '0', STR_PAD_LEFT);
+        // str_pad($idBarang, 3, '0', STR_PAD_LEFT);
+        // dd($idBarang);
         $destinationPath = public_path('/Image/');
         $file = $request->file('gambarBarang');
         // $allowedExt = ['jpg','jpeg','png'];
@@ -53,7 +63,7 @@ class BarangController extends Controller
         // $filesize = $file->getSize();
         
         $barang = new barang();
-        $barang->id_barang = $request->idBarang;
+        $barang->id_barang = $idBarang;
         $barang->nama_barang = $request->namaBarang;
         $barang->harga_barang = $request->hargaBarang;
         $barang->linktokped = $request->linkBarang;
@@ -63,7 +73,7 @@ class BarangController extends Controller
         $barang->id_subkategori = $request->subKategori;
         if ($barang->save()) {
             $file->move($destinationPath.$request->idBarang.'/','profil.jpg');
-            return redirect()->route('viewBarang')->with('messages','Kategori berhasil ditambah');
+            return redirect()->route('viewBarang')->with('messages','Barang berhasil ditambah');
         }
         else{
         }
