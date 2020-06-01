@@ -71,7 +71,7 @@
                             <div class="single_product_menu">
                                 <form action="{{ url('/products/search') }}" method="get">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" name="search" placeholder="search"
+                                    <input type="text" value="{{$search}}" class="form-control" name="search" placeholder="search"
                                             aria-describedby="inputGroupPrepend">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend"><i
