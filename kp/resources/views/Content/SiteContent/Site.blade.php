@@ -413,7 +413,14 @@
             </div>
           </div>
           <div class="media contact-info">
-            <span class="contact-info__icon"><i class="ti-call"></i></span>
+            <span class="contact-info__icon"><i class="ti-alarm-clock"></i></span>
+            <div class="media-body">
+              <h3>Mon to Fri 8am to 5pm</h3>
+              {{-- <p>Mon to Fri 8am to 5pm</p> --}}
+            </div>
+          </div>
+          <div class="media contact-info">
+            <span class="contact-info__icon"><i class="ti-user"></i></span>
             <div class="media-body">
               <h3>(031) 7480878</h3>
               {{-- <p>Mon to Fri 8am to 5pm</p> --}}
@@ -430,7 +437,7 @@
             <span class="contact-info__icon"><i class="ti-email"></i></span>
             <div class="media-body">
               <h3>sinarsuryadiesel@gmail.com</h3>
-              <p>Mon to sat 8am to 4pm</p>
+              {{-- <p>Mon to sat 8am to 4pm</p> --}}
             </div>
           </div>
         </div>
