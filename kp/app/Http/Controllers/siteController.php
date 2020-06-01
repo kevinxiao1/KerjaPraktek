@@ -64,7 +64,7 @@ class siteController extends Controller
     }
     public function ProductsKategori(Request $request, $kategori)
     {
-        $daftarBarang = DB::table('barang')->where('id_kategori',$kategori)->paginate(6);
+        $daftarBarang = DB::table('barang')->where('id_kategori',$kategori)->paginate(9);
         $daftarKategori = kategori::all();
         $daftarSubKategori = subkategori::select()->where('id_kategori','=',$kategori)->get();
         // dd($daftarSubKategori);
@@ -85,7 +85,7 @@ class siteController extends Controller
 
     public function ProductsSubKategori(Request $request, $subkategori)
     {
-        $daftarBarang = DB::table('barang')->where('id_subkategori',$subkategori)->paginate(6);
+        $daftarBarang = DB::table('barang')->where('id_subkategori',$subkategori)->paginate(9);
         $daftarKategori = kategori::all();
         $daftarSubKategori = subkategori::all();
         $kategori = subkategori::find($subkategori);
