@@ -28,7 +28,7 @@ class siteController extends Controller
         $daftarSubKategori = subkategori::all();
         $kategoriTerpilih = "";
         $subKategoriTerpilih = "";
-        // $jumlahBarang = DB::table('barang')->count();
+        $jumlahBarang = DB::table('barang')->count();
         return view('Content.SiteContent.Katalog.viewKatalog',
         [
             'daftarBarang' => $daftarBarang,
@@ -36,7 +36,7 @@ class siteController extends Controller
             'daftarSubKategori' => $daftarSubKategori,
             'kategoriTerpilih' => $kategoriTerpilih,
             'subKategoriTerpilih' => $subKategoriTerpilih,
-            // 'jumlahBarang' => $jumlahBarang,
+            'jumlahBarang' => $jumlahBarang,
         ]);
     }
     public function ProductsSearch(Request $request)
@@ -46,7 +46,14 @@ class siteController extends Controller
         ->orWhere('id_kategori', 'LIKE', "%{$request->search}%") 
         ->orWhere('id_subkategori', 'LIKE', "%{$request->search}%") 
         ->orWhere('deskripsi_barang', 'LIKE', "%{$request->search}%") 
-        ->paginate(6);
+        ->paginate(9);
+        $jumlahBarang = DB::table('barang')
+        ->where('nama_barang', 'LIKE', "%{$request->search}%") 
+        ->orWhere('id_kategori', 'LIKE', "%{$request->search}%") 
+        ->orWhere('id_subkategori', 'LIKE', "%{$request->search}%") 
+        ->orWhere('deskripsi_barang', 'LIKE', "%{$request->search}%") 
+        ->count();
+        $daftarBarang->appends(['search' => $request->search]);
         $daftarKategori = kategori::all();
         $daftarSubKategori = subkategori::all();
         $kategoriTerpilih = "";
@@ -59,7 +66,7 @@ class siteController extends Controller
             'daftarSubKategori' => $daftarSubKategori,
             'kategoriTerpilih' => $kategoriTerpilih,
             'subKategoriTerpilih' => $subKategoriTerpilih,
-            // 'jumlahBarang' => $jumlahBarang,
+            'jumlahBarang' => $jumlahBarang,
         ]);
     }
     public function ProductsKategori(Request $request, $kategori)
@@ -68,7 +75,7 @@ class siteController extends Controller
         $daftarKategori = kategori::all();
         $daftarSubKategori = subkategori::select()->where('id_kategori','=',$kategori)->get();
         // dd($daftarSubKategori);
-        // $jumlahBarang = DB::table('barang')->count();
+        $jumlahBarang = DB::table('barang')->where('id_kategori',$kategori)->count();
         // $sub = kategori::find($kategori);
         $kategoriTerpilih = $kategori;
         $subKategoriTerpilih = $daftarSubKategori;
@@ -79,7 +86,7 @@ class siteController extends Controller
             'daftarSubKategori' => $daftarSubKategori,
             'kategoriTerpilih' => $kategoriTerpilih,
             'subKategoriTerpilih' => $subKategoriTerpilih,
-            // 'jumlahBarang' => $jumlahBarang,
+            'jumlahBarang' => $jumlahBarang,
         ]);
     }
 
@@ -92,6 +99,7 @@ class siteController extends Controller
         // dd($kategori['id_kategori']);
         $kategoriTerpilih = $kategori['id_kategori'];
         $subKategoriTerpilih = $subkategori;
+        $jumlahBarang = DB::table('barang')->where('id_subkategori',$subkategori)->count();
         // $jumlahBarang = DB::table('barang')->count();
         return view('Content.SiteContent.Katalog.viewKatalog',
         [
@@ -100,7 +108,7 @@ class siteController extends Controller
             'daftarSubKategori' => $daftarSubKategori,
             'subKategoriTerpilih' => $subKategoriTerpilih,
             'kategoriTerpilih' => $kategoriTerpilih,
-            // 'jumlahBarang' => $jumlahBarang,
+            'jumlahBarang' => $jumlahBarang,
         ]);
     }
     public function ProductsDetail(Request $request, $id)
