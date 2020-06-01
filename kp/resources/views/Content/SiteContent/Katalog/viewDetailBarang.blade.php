@@ -26,13 +26,13 @@
                     <h3>{{$daftarBarang->nama_barang}}</h3>
                     <ul class="list">
                         <li style="font-size: 13pt">
-                            <a onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'" class="active" href="/products/kategori/{{$daftarBarang->id_kategori}}">
+                            <a style="color: black" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'" class="active" href="/products/kategori/{{$daftarBarang->id_kategori}}">
                                 <span>Category</span> : {{$daftarBarang->Kategori->nama_kategori}}</a>
                         </li>
                         <hr>
 
                         <li style="font-size: 13pt">
-                            <a onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'" class="active" href="/products/subkategori/{{$daftarBarang->id_subkategori}}">
+                            <a style="color: black" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'" class="active" href="/products/subkategori/{{$daftarBarang->id_subkategori}}">
                                 <span>Subcategory</span> : {{$daftarBarang->Subkategori->nama_subkategori}}</a>
                         </li>
                         <hr>
