@@ -43,15 +43,15 @@ class siteController extends Controller
     {
         $daftarBarang = DB::table('barang')
         ->where('nama_barang', 'LIKE', "%{$request->search}%") 
-        ->orWhere('id_kategori', 'LIKE', "%{$request->search}%") 
-        ->orWhere('id_subkategori', 'LIKE', "%{$request->search}%") 
-        ->orWhere('deskripsi_barang', 'LIKE', "%{$request->search}%") 
+        // ->orWhere('id_kategori', 'LIKE', "%{$request->search}%") 
+        // ->orWhere('id_subkategori', 'LIKE', "%{$request->search}%") 
+        // ->orWhere('deskripsi_barang', 'LIKE', "%{$request->search}%") 
         ->paginate(9);
         $jumlahBarang = DB::table('barang')
         ->where('nama_barang', 'LIKE', "%{$request->search}%") 
-        ->orWhere('id_kategori', 'LIKE', "%{$request->search}%") 
-        ->orWhere('id_subkategori', 'LIKE', "%{$request->search}%") 
-        ->orWhere('deskripsi_barang', 'LIKE', "%{$request->search}%") 
+        // ->orWhere('id_kategori', 'LIKE', "%{$request->search}%") 
+        // ->orWhere('id_subkategori', 'LIKE', "%{$request->search}%") 
+        // ->orWhere('deskripsi_barang', 'LIKE', "%{$request->search}%") 
         ->count();
         $daftarBarang->appends(['search' => $request->search]);
         $daftarKategori = kategori::all();
