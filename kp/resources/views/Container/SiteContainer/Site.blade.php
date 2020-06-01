@@ -208,7 +208,7 @@
 
     @yield('content')
     {{-- <span class="float">Need Help?</span> --}}
-    <a href="https://api.whatsapp.com/send?phone=6281357260908&text=Saya%20ingin%20mencari%20barang%20di%20toko%20ini.%20Mohon%20Bantuannya."
+    <a href="https://api.whatsapp.com/send?phone=6282331350065&text=Saya%20ingin%20mencari%20barang%20di%20toko%20ini.%20Mohon%20Bantuannya."
         target="blank" class="float">
         <i class="fa fa-phone my-float"></i>
     </a>
