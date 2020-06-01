@@ -46,7 +46,7 @@
                         </li>
                     </ul>
                     <div class="card_area d-flex justify-content-between align-items-center">
-                        <a href="https://api.whatsapp.com/send?phone=6281803020696&text=Saya%20ingin%20bertanya%20tentang%20ketersediaan%20barang%20{{$daftarBarang->nama_barang}}%20di%20toko%20ini.%20Mohon%20Bantuannya."
+                        <a href="https://api.whatsapp.com/send?phone=6282331350065&text=Saya%20ingin%20bertanya%20tentang%20ketersediaan%20barang%20{{$daftarBarang->nama_barang}}%20di%20toko%20ini.%20Mohon%20Bantuannya."
                             class="btn_3" target="_blank">Contact the seller</a>
                         @if ($daftarBarang->linktokped == "none" || $daftarBarang->linktokped == null)
                         
@@ -70,7 +70,7 @@
         <div class="container">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
-                    <h1>Descrition</h1>
+                    <h1>Description</h1>
                     {{-- <a class="nav-link active" id="home-tab" data-toggle="tab" role="tab"
                         aria-controls="home" aria-selected="true">Description</a> --}}
                 </li>
