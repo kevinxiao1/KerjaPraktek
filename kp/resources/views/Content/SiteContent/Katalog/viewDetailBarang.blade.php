@@ -26,13 +26,13 @@
                     <h3>{{$daftarBarang->nama_barang}}</h3>
                     <ul class="list">
                         <li style="font-size: 13pt">
-                            <a class="active" href="/products/kategori/{{$daftarBarang->id_kategori}}">
+                            <a onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'" class="active" href="/products/kategori/{{$daftarBarang->id_kategori}}">
                                 <span>Category</span> : {{$daftarBarang->Kategori->nama_kategori}}</a>
                         </li>
                         <hr>
 
                         <li style="font-size: 13pt">
-                            <a class="active" href="/products/subkategori/{{$daftarBarang->id_subkategori}}">
+                            <a onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'" class="active" href="/products/subkategori/{{$daftarBarang->id_subkategori}}">
                                 <span>Subcategory</span> : {{$daftarBarang->Subkategori->nama_subkategori}}</a>
                         </li>
                         <hr>
@@ -41,8 +41,8 @@
                             <a href="#"> <span>Availibility</span> : In Stock</a>
                         </li>
                         <hr>
-                        <li style="font-size: 13pt; vertical-align: center">
-                            <a href="#"> <span>Price</span> : Rp.{{number_format($daftarBarang->harga_barang,2,",",".") }}</a>
+                        <li style="font-size: 13pt">
+                            <a href="#"> <span>Price</span> : <b style="font-size: 14pt; color: black">Rp.{{number_format($daftarBarang->harga_barang,2,",",".") }}</b></a>
                         </li>
                     </ul>
                     <div class="card_area d-flex justify-content-between align-items-center">

@@ -413,17 +413,24 @@
             </div>
           </div>
           <div class="media contact-info">
-            <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+            <span class="contact-info__icon"><i class="ti-call"></i></span>
             <div class="media-body">
               <h3>(031) 7480878</h3>
-              <p>Mon to Fri 8am to 5pm</p>
+              {{-- <p>Mon to Fri 8am to 5pm</p> --}}
+            </div>
+          </div>
+          <div class="media contact-info">
+            <span class="contact-info__icon"><i class="ti-mobile"></i></span>
+            <div class="media-body">
+              <h3>+62 823-3135-0065 </h3>
+              {{-- <p>Mon to Fri 8am to 5pm</p> --}}
             </div>
           </div>
           <div class="media contact-info">
             <span class="contact-info__icon"><i class="ti-email"></i></span>
             <div class="media-body">
               <h3>sinarsuryadiesel@gmail.com</h3>
-              <p>Mon to Fri 8am to 5pm</p>
+              <p>Mon to sat 8am to 4pm</p>
             </div>
           </div>
         </div>

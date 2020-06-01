@@ -23,7 +23,7 @@ class siteController extends Controller
     public function Products(Request $request)
     {
         // $daftarBarang = barang::all();
-        $daftarBarang = DB::table('barang')->paginate(6);
+        $daftarBarang = DB::table('barang')->paginate(9);
         $daftarKategori = kategori::all();
         $daftarSubKategori = subkategori::all();
         $kategoriTerpilih = "";
