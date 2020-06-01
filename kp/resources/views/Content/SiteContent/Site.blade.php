@@ -415,7 +415,7 @@
           <div class="media contact-info">
             <span class="contact-info__icon"><i class="ti-alarm-clock"></i></span>
             <div class="media-body">
-              <h3>Mon to Fri 8am to 5pm</h3>
+              <h3>Mon to Fri 8am to 4pm</h3>
               {{-- <p>Mon to Fri 8am to 5pm</p> --}}
             </div>
           </div>
