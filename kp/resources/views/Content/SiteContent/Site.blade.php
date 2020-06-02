@@ -14,7 +14,7 @@
                                         <h1>Welcome!
                                             </h1>
                                         <p>Start browsing our products here !</p>
-                                        <a href="/products" class="btn_2">Browse Products</a>
+                                        <a href="/products" class="btn_2">Browse</a>
                                     </div>
                                 </div>
                             </div>
