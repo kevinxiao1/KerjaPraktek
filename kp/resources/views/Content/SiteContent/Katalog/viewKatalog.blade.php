@@ -90,21 +90,16 @@
                     @if ($item->status_barang == 1)
                         <div class="col-lg-4 col-sm-6">
                             <div class="single_product_item">
-                                @if ($item->status_barang == 1)
-                                    @if ($item->gambar_barang == null)
-                                    <img src="{{asset('ImageNotFound/notFound.png')}}" alt="">
-                                    @else
-                                    <img src="{{asset('Image/'.$item->id_barang.'/profil.jpg')}}" alt="">
-                                    @endif
-                                    <div class="single_product_text">
-                                        <h4>{{ $item->nama_barang }}</h4>
-                                        <h3>Rp.{{number_format($item->harga_barang,2,",",".") }}</h3>
-                                        <a href="/products/productsdetail/{{$item->id_barang}}" class="add_cart">View Detail</a>
-                                    </div>
+                                @if ($item->gambar_barang == null)
+                                <img src="{{asset('ImageNotFound/notFound.png')}}" alt="">
                                 @else
-                                    
+                                <img src="{{asset('Image/'.$item->id_barang.'/profil.jpg')}}" alt="">
                                 @endif
-                                
+                                <div class="single_product_text">
+                                    <h4>{{ $item->nama_barang }}</h4>
+                                    <h3>Rp.{{number_format($item->harga_barang,2,",",".") }}</h3>
+                                    <a href="/products/productsdetail/{{$item->id_barang}}" class="add_cart">View Detail</a>
+                                </div>
                             </div>
                         </div>
                     @else
