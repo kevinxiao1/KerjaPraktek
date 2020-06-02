@@ -14,7 +14,7 @@ class siteController extends Controller
     //
     public function Home(Request $request)
     {
-        $daftarBarang = barang::all();
+        $daftarBarang = barang::select()->where('status_barang','=',1)->get();
         return view('Content.SiteContent.Site',
         [
             'daftarBarang' => $daftarBarang,
