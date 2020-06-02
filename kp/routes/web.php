@@ -21,11 +21,11 @@ Route::get('/products/productsdetail/{id}','SiteController@ProductsDetail')->nam
 Route::get('/login','SiteController@Login')->name('Login');
 Route::post('/doLogin','SiteController@doLogin')->name('doLogin');
 Route::group(['prefix'=>'admin'], function() {
-    Route::get('/dashboard','adminController@dashboard')->name('dashboard');
-    Route::get('/Logout','adminController@Logout')->name('Logout');
+    Route::get('/dashboard','AdminController@dashboard')->name('dashboard');
+    Route::get('/Logout','AdminController@Logout')->name('Logout');
 
     // barang
-    Route::get('/viewBarang','adminController@viewBarang')->name('viewBarang');
+    Route::get('/viewBarang','AdminController@viewBarang')->name('viewBarang');
     // create
     Route::get('/createBarang',array('as'=>'createBarang','uses'=>'BarangController@createBarang'));
     //ajax
@@ -41,7 +41,7 @@ Route::group(['prefix'=>'admin'], function() {
     Route::post('/doUpdateBarang','BarangController@doUpdateBarang')->name('doUpdateBarang');
 //Kategori 
 // view
-    Route::get('/viewKategori','adminController@viewKategori')->name('viewKategori');
+    Route::get('/viewKategori','AdminController@viewKategori')->name('viewKategori');
 // update
     Route::get('/updateKategori','KategoriController@updateKategori')->name('updateKategori');
     Route::get('/doUpdateKategori','KategoriController@doUpdateKategori')->name('doUpdateKategori');
@@ -56,7 +56,7 @@ Route::group(['prefix'=>'admin'], function() {
 
 // Subkategori
 // view
-    Route::get('/viewSubKategori','adminController@viewSubKategori')->name('viewSubKategori');
+    Route::get('/viewSubKategori','AdminController@viewSubKategori')->name('viewSubKategori');
 // insert
     Route::get('/createSubKategori','SubKategoriController@createSubKategori')->name('createSubKategori');
     Route::get('/doCreateSubKategori','SubKategoriController@doCreateSubKategori')->name('doCreateSubKategori');
