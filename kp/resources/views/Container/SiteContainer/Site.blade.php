@@ -25,7 +25,9 @@
     <!-- style CSS -->
     <link rel="stylesheet" href="{{asset('Site/css/style.css')}}">
     {{-- ajax --}}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> --}}
+    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> --}}
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 
     <style>
         .fix {
@@ -322,7 +324,7 @@
         });
     </script>
     <!-- jquery plugins here-->
-    <script src="{{asset('Site/js/jquery-1.12.1.min.js')}}"></script>
+    {{-- <script src="{{asset('Site/js/jquery-1.12.1.min.js')}}"></script> --}}
     <!-- popper js -->
     <script src="{{asset('Site/js/popper.min.js')}}"></script>
     <!-- bootstrap js -->
