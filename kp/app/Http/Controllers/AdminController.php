@@ -59,6 +59,6 @@ class AdminController extends Controller
     public function Logout()
     {
         Session::forget('username');
-        return redirect('/login');
+        return redirect('/loginSSD');
     }
 }

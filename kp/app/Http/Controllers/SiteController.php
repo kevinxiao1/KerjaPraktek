@@ -136,12 +136,12 @@ class siteController extends Controller
 
     public function doLogin(Request $request)
     {
-        if ($request->username =="admin" && $request->password =="admin") {
+        if ($request->username =="SSDadmin" && $request->password =="suryadieselsby") {
             Session::put("username",$request->username); 
             return  redirect('/admin/dashboard');
         }
         else{
-            return  redirect('/login');
+            return  redirect('/loginSSD');
         }
     }
 }

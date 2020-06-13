@@ -18,7 +18,7 @@ Route::get('/products/subkategori/{subkategori}','SiteController@ProductsSubKate
 Route::get('/products/search','SiteController@ProductsSearch')->name('ProductsSearch');
 Route::get('/products/productsdetail/{id}','SiteController@ProductsDetail')->name('ProductsDetail');
 
-Route::get('/login','SiteController@Login')->name('Login');
+Route::get('/loginSSD','SiteController@Login')->name('Login');
 Route::post('/doLogin','SiteController@doLogin')->name('doLogin');
 Route::group(['prefix'=>'admin'], function() {
     Route::get('/dashboard','AdminController@dashboard')->name('dashboard');
