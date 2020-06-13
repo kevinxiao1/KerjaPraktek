@@ -38,7 +38,7 @@
                         <hr>
                         
                         <li style="font-size: 13pt">
-                            <a href="#"> <span>Availibility</span> : In Stock</a>
+                            <a href="#"> <span>Availability</span> : In Stock</a>
                         </li>
                         <hr>
                         <li style="font-size: 13pt">
@@ -53,7 +53,7 @@
                         @else
                             {{-- <div class="card_area d-flex justify-content-between align-items-center"> --}}
                                 <a href="{{$daftarBarang->linktokped}}"
-                                    class="btn_3" style="background-color: green" target="_blank">Avaiable in tokopedia</a>
+                                    class="btn_3" style="background-color: green" target="_blank">Available in tokopedia</a>
                             {{-- </div> --}}
                         @endif
                     </div>
