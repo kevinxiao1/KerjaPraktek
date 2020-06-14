@@ -17,8 +17,6 @@ class CreateKontenTable extends Migration
             $table->bigIncrements('id_konten');
             $table->string('isi_konten');
             $table->tinyInteger('status_konten',0)->default('1')->unsigned();  
-
-            $table->timestamps();
         });
     }
 

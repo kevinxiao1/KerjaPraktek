@@ -2353,7 +2353,7 @@ class DatabaseSeeder extends Seeder
                     <td> :  68 mm x 45 mm </td>
                 </tr>
                 <tr>
-                    <td> Engine Capacity/td>
+                    <td> Engine Capacity</td>
                     <td> :  163 cc</td>
                 </tr>
                 <tr>
@@ -2416,7 +2416,7 @@ class DatabaseSeeder extends Seeder
                     <td> :  68 mm x 45 mm </td>
                 </tr>
                 <tr>
-                    <td> Engine Capacity/td>
+                    <td> Engine Capacity</td>
                     <td> :  163 cc</td>
                 </tr>
                 <tr>
@@ -2479,7 +2479,7 @@ class DatabaseSeeder extends Seeder
                     <td> :  68 mm x 54 mm </td>
                 </tr>
                 <tr>
-                    <td> Engine Capacity/td>
+                    <td> Engine Capacity</td>
                     <td> :  196 cc</td>
                 </tr>
                 <tr>
@@ -2542,7 +2542,7 @@ class DatabaseSeeder extends Seeder
                     <td> :  30 meters </td>
                 </tr>
                 <tr>
-                    <td> Hydration Intensity/td>
+                    <td> Hydration Intensity</td>
                     <td> :  575 litres / min</td>
                 </tr>
                 <tr>
@@ -2597,7 +2597,7 @@ class DatabaseSeeder extends Seeder
                     <td> :  30 meters </td>
                 </tr>
                 <tr>
-                    <td> Hydration Intensity/td>
+                    <td> Hydration Intensity</td>
                     <td> :  1050 litres / min</td>
                 </tr>
                 <tr>
@@ -2652,7 +2652,7 @@ class DatabaseSeeder extends Seeder
                     <td> :  30 meters </td>
                 </tr>
                 <tr>
-                    <td> Hydration Intensity/td>
+                    <td> Hydration Intensity</td>
                     <td> :  1050 litres / min</td>
                 </tr>
                 <tr>
@@ -2707,7 +2707,7 @@ class DatabaseSeeder extends Seeder
         //             <td> :  30 meters </td>
         //         </tr>
         //         <tr>
-        //             <td> Hydration Intensity/td>
+        //             <td> Hydration Intensity</td>
         //             <td> :  1050 litres / min</td>
         //         </tr>
         //         <tr>
@@ -2763,7 +2763,7 @@ class DatabaseSeeder extends Seeder
         //             <td> :  30 meters </td>
         //         </tr>
         //         <tr>
-        //             <td> Hydration Intensity/td>
+        //             <td> Hydration Intensity</td>
         //             <td> :  1050 litres / min</td>
         //         </tr>
         //         <tr>
@@ -2809,7 +2809,7 @@ class DatabaseSeeder extends Seeder
             <tbody>
                 <tr>
                     <td> Frequency </td>
-                    <td> :  50 Hz/td>
+                    <td> :  50 Hz</td>
                 </tr>
                 <tr>
                     <td> Average Power </td>
@@ -2820,7 +2820,7 @@ class DatabaseSeeder extends Seeder
                     <td> :  220 V </td>
                 </tr>
                 <tr>
-                    <td> Voltage Regulator/td>
+                    <td> Voltage Regulator</td>
                     <td> :  Automatic</td>
                 </tr>
                 <tr>
@@ -2850,7 +2850,7 @@ class DatabaseSeeder extends Seeder
                 </tr>
                 <tr>
                     <td> Oil Sensors</td>
-                    <td> :  No/td>
+                    <td> :  No</td>
                 </tr>
                 <tr>
                     <td> Wheel Attachments</td>
@@ -2885,7 +2885,7 @@ class DatabaseSeeder extends Seeder
             <tbody>
                 <tr>
                     <td> Frequency </td>
-                    <td> :  50 Hz/td>
+                    <td> :  50 Hz</td>
                 </tr>
                 <tr>
                     <td> Average Power </td>
@@ -2896,7 +2896,7 @@ class DatabaseSeeder extends Seeder
                     <td> :  220 V </td>
                 </tr>
                 <tr>
-                    <td> Voltage Regulator/td>
+                    <td> Voltage Regulator</td>
                     <td> :  Automatic</td>
                 </tr>
                 <tr>
@@ -2961,7 +2961,7 @@ class DatabaseSeeder extends Seeder
             <tbody>
                 <tr>
                     <td> Frequency </td>
-                    <td> :  50 Hz/td>
+                    <td> :  50 Hz</td>
                 </tr>
                 <tr>
                     <td> Average Power </td>
@@ -2972,7 +2972,7 @@ class DatabaseSeeder extends Seeder
                     <td> :  220 V </td>
                 </tr>
                 <tr>
-                    <td> Voltage Regulator/td>
+                    <td> Voltage Regulator</td>
                     <td> :  Automatic</td>
                 </tr>
                 <tr>
@@ -3037,7 +3037,7 @@ class DatabaseSeeder extends Seeder
             <tbody>
                 <tr>
                     <td> Frequency </td>
-                    <td> :  50 Hz/td>
+                    <td> :  50 Hz</td>
                 </tr>
                 <tr>
                     <td> Average Power </td>
@@ -3048,7 +3048,7 @@ class DatabaseSeeder extends Seeder
                     <td> :  220 V </td>
                 </tr>
                 <tr>
-                    <td> Voltage Regulator/td>
+                    <td> Voltage Regulator</td>
                     <td> :  Automatic</td>
                 </tr>
                 <tr>
@@ -3113,7 +3113,7 @@ class DatabaseSeeder extends Seeder
             <tbody>
                 <tr>
                     <td> Frequency </td>
-                    <td> :  50 Hz/td>
+                    <td> :  50 Hz</td>
                 </tr>
                 <tr>
                     <td> Average Power </td>
@@ -3124,7 +3124,7 @@ class DatabaseSeeder extends Seeder
                     <td> :  220 V </td>
                 </tr>
                 <tr>
-                    <td> Voltage Regulator/td>
+                    <td> Voltage Regulator</td>
                     <td> :  Automatic</td>
                 </tr>
                 <tr>
@@ -3868,7 +3868,7 @@ class DatabaseSeeder extends Seeder
                     <td> :  68 mm x 54 mm </td>
                 </tr>
                 <tr>
-                    <td> Engine Capacity/td>
+                    <td> Engine Capacity</td>
                     <td> :  163 cc</td>
                 </tr>
                 <tr>
@@ -3936,7 +3936,7 @@ class DatabaseSeeder extends Seeder
                     <td> :  68 mm x 54 mm </td>
                 </tr>
                 <tr>
-                    <td> Engine Capacity/td>
+                    <td> Engine Capacity</td>
                     <td> :  196 cc</td>
                 </tr>
                 <tr>
@@ -4004,7 +4004,7 @@ class DatabaseSeeder extends Seeder
                     <td> :  30 meters </td>
                 </tr>
                 <tr>
-                    <td> Hydration Intensity/td>
+                    <td> Hydration Intensity</td>
                     <td> :  575 litres / min</td>
                 </tr>
                 <tr>
@@ -4063,7 +4063,7 @@ class DatabaseSeeder extends Seeder
                     <td> :  30 meters </td>
                 </tr>
                 <tr>
-                    <td> Hydration Intensity/td>
+                    <td> Hydration Intensity</td>
                     <td> :  1050 litres / min</td>
                 </tr>
                 <tr>
@@ -4107,7 +4107,7 @@ class DatabaseSeeder extends Seeder
             <tbody>
                 <tr>
                     <td> Frequency </td>
-                    <td> :  50 Hz/td>
+                    <td> :  50 Hz</td>
                 </tr>
                 <tr>
                     <td> Average Power </td>
@@ -4118,7 +4118,7 @@ class DatabaseSeeder extends Seeder
                     <td> :  220 V </td>
                 </tr>
                 <tr>
-                    <td> Voltage Regulator/td>
+                    <td> Voltage Regulator</td>
                     <td> :  Automatic</td>
                 </tr>
                 <tr>
@@ -4151,7 +4151,7 @@ class DatabaseSeeder extends Seeder
                 </tr>
                 <tr>
                     <td> Wheel Attachments</td>
-                    <td> :  No/td>
+                    <td> :  No</td>
                 </tr>
                     <td> Net Weight</td>
                     <td> : 23 Kg</td>
@@ -4177,7 +4177,7 @@ class DatabaseSeeder extends Seeder
             <tbody>
                 <tr>
                     <td> Frequency </td>
-                    <td> :  50 Hz/td>
+                    <td> :  50 Hz</td>
                 </tr>
                 <tr>
                     <td> Average Power </td>
@@ -4188,7 +4188,7 @@ class DatabaseSeeder extends Seeder
                     <td> :  220 V </td>
                 </tr>
                 <tr>
-                    <td> Voltage Regulator/td>
+                    <td> Voltage Regulator</td>
                     <td> :  Automatic</td>
                 </tr>
                 <tr>
@@ -4247,7 +4247,7 @@ class DatabaseSeeder extends Seeder
         //     <tbody>
         //         <tr>
         //             <td> Frequency </td>
-        //             <td> :  50 Hz/td>
+        //             <td> :  50 Hz</td>
         //         </tr>
         //         <tr>
         //             <td> Average Power </td>
@@ -4258,7 +4258,7 @@ class DatabaseSeeder extends Seeder
         //             <td> :  220 V </td>
         //         </tr>
         //         <tr>
-        //             <td> Voltage Regulator/td>
+        //             <td> Voltage Regulator</td>
         //             <td> :  Automatic</td>
         //         </tr>
         //         <tr>
@@ -4317,7 +4317,7 @@ class DatabaseSeeder extends Seeder
             <tbody>
                 <tr>
                     <td> Frequency </td>
-                    <td> :  50 Hz/td>
+                    <td> :  50 Hz</td>
                 </tr>
                 <tr>
                     <td> Average Power </td>
@@ -4328,7 +4328,7 @@ class DatabaseSeeder extends Seeder
                     <td> :  220 V </td>
                 </tr>
                 <tr>
-                    <td> Voltage Regulator/td>
+                    <td> Voltage Regulator</td>
                     <td> :  Automatic</td>
                 </tr>
                 <tr>
@@ -4387,22 +4387,22 @@ class DatabaseSeeder extends Seeder
             <tbody>
                 <tr>
                     <td> KW </td>
-                    <td> :  0.18 kW/td>
+                    <td> :  0.18 kW</td>
                 </tr>
                 <tr>
                     <td> Frequency </td>
-                    <td> :  50 Hz/td>
+                    <td> :  50 Hz</td>
                 </tr>
                 <tr>
                     <td> Pole</td>
-                    <td> :  4/td>
+                    <td> :  4</td>
                 </tr>
                 <tr>
                     <td> Voltage </td>
                     <td> :  220 V </td>
                 </tr>
                 <tr>
-                    <td> Frame/td>
+                    <td> Frame</td>
                     <td> :  80 L</td>
                 </tr>
                 <tr>
@@ -4445,22 +4445,22 @@ class DatabaseSeeder extends Seeder
             <tbody>
                 <tr>
                     <td> KW </td>
-                    <td> :  0.37 kW/td>
+                    <td> :  0.37 kW</td>
                 </tr>
                 <tr>
                     <td> Frequency </td>
-                    <td> :  50 Hz/td>
+                    <td> :  50 Hz</td>
                 </tr>
                 <tr>
                     <td> Pole</td>
-                    <td> :  4/td>
+                    <td> :  4</td>
                 </tr>
                 <tr>
                     <td> Voltage </td>
                     <td> :  220 V </td>
                 </tr>
                 <tr>
-                    <td> Frame/td>
+                    <td> Frame</td>
                     <td> :  80 L</td>
                 </tr>
                 <tr>
@@ -4503,22 +4503,22 @@ class DatabaseSeeder extends Seeder
             <tbody>
                 <tr>
                     <td> KW </td>
-                    <td> :  0.75 kW/td>
+                    <td> :  0.75 kW</td>
                 </tr>
                 <tr>
                     <td> Frequency </td>
-                    <td> :  50 Hz/td>
+                    <td> :  50 Hz</td>
                 </tr>
                 <tr>
                     <td> Pole</td>
-                    <td> :  4/td>
+                    <td> :  4</td>
                 </tr>
                 <tr>
                     <td> Voltage </td>
                     <td> :  220 V </td>
                 </tr>
                 <tr>
-                    <td> Frame/td>
+                    <td> Frame</td>
                     <td> :  90 L</td>
                 </tr>
                 <tr>
@@ -4561,22 +4561,22 @@ class DatabaseSeeder extends Seeder
             <tbody>
                 <tr>
                     <td> KW </td>
-                    <td> :  1.50 kW/td>
+                    <td> :  1.50 kW</td>
                 </tr>
                 <tr>
                     <td> Frequency </td>
-                    <td> :  50 Hz/td>
+                    <td> :  50 Hz</td>
                 </tr>
                 <tr>
                     <td> Pole</td>
-                    <td> :  4/td>
+                    <td> :  4</td>
                 </tr>
                 <tr>
                     <td> Voltage </td>
                     <td> :  220 V </td>
                 </tr>
                 <tr>
-                    <td> Frame/td>
+                    <td> Frame</td>
                     <td> :  90 L</td>
                 </tr>
                 <tr>
@@ -4619,22 +4619,22 @@ class DatabaseSeeder extends Seeder
             <tbody>
                 <tr>
                     <td> KW </td>
-                    <td> :  2.2 kW/td>
+                    <td> :  2.2 kW</td>
                 </tr>
                 <tr>
                     <td> Frequency </td>
-                    <td> :  50 Hz/td>
+                    <td> :  50 Hz</td>
                 </tr>
                 <tr>
                     <td> Pole</td>
-                    <td> :  4/td>
+                    <td> :  4</td>
                 </tr>
                 <tr>
                     <td> Voltage </td>
                     <td> :  380 V </td>
                 </tr>
                 <tr>
-                    <td> Frame/td>
+                    <td> Frame</td>
                     <td> :  100 L</td>
                 </tr>
                 <tr>
@@ -4677,22 +4677,22 @@ class DatabaseSeeder extends Seeder
             <tbody>
                 <tr>
                     <td> KW </td>
-                    <td> :  3.70 kW/td>
+                    <td> :  3.70 kW</td>
                 </tr>
                 <tr>
                     <td> Frequency </td>
-                    <td> :  50 Hz/td>
+                    <td> :  50 Hz</td>
                 </tr>
                 <tr>
                     <td> Pole</td>
-                    <td> :  4/td>
+                    <td> :  4</td>
                 </tr>
                 <tr>
                     <td> Voltage </td>
                     <td> :  380 V </td>
                 </tr>
                 <tr>
-                    <td> Frame/td>
+                    <td> Frame</td>
                     <td> :  112 M</td>
                 </tr>
                 <tr>
@@ -4735,22 +4735,22 @@ class DatabaseSeeder extends Seeder
             <tbody>
                 <tr>
                     <td> KW </td>
-                    <td> :  5.5 kW/td>
+                    <td> :  5.5 kW</td>
                 </tr>
                 <tr>
                     <td> Frequency </td>
-                    <td> :  50 Hz/td>
+                    <td> :  50 Hz</td>
                 </tr>
                 <tr>
                     <td> Pole</td>
-                    <td> :  4/td>
+                    <td> :  4</td>
                 </tr>
                 <tr>
                     <td> Voltage </td>
                     <td> :  380 V </td>
                 </tr>
                 <tr>
-                    <td> Frame/td>
+                    <td> Frame</td>
                     <td> :  132 S</td>
                 </tr>
                 <tr>
@@ -4793,22 +4793,22 @@ class DatabaseSeeder extends Seeder
             <tbody>
                 <tr>
                     <td> KW </td>
-                    <td> :  7.5 kW/td>
+                    <td> :  7.5 kW</td>
                 </tr>
                 <tr>
                     <td> Frequency </td>
-                    <td> :  50 Hz/td>
+                    <td> :  50 Hz</td>
                 </tr>
                 <tr>
                     <td> Pole</td>
-                    <td> :  4/td>
+                    <td> :  4</td>
                 </tr>
                 <tr>
                     <td> Voltage </td>
                     <td> :  380 V </td>
                 </tr>
                 <tr>
-                    <td> Frame/td>
+                    <td> Frame</td>
                     <td> :  132 M</td>
                 </tr>
                 <tr>
@@ -4851,22 +4851,22 @@ class DatabaseSeeder extends Seeder
             <tbody>
                 <tr>
                     <td> KW </td>
-                    <td> :  11 kW/td>
+                    <td> :  11 kW</td>
                 </tr>
                 <tr>
                     <td> Frequency </td>
-                    <td> :  50 Hz/td>
+                    <td> :  50 Hz</td>
                 </tr>
                 <tr>
                     <td> Pole</td>
-                    <td> :  4/td>
+                    <td> :  4</td>
                 </tr>
                 <tr>
                     <td> Voltage </td>
                     <td> :  380 V </td>
                 </tr>
                 <tr>
-                    <td> Frame/td>
+                    <td> Frame</td>
                     <td> :  160 M</td>
                 </tr>
                 <tr>

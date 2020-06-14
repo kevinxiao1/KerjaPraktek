@@ -18,8 +18,6 @@ class CreateSubkategoriTable extends Migration
             $table->string('id_kategori');
             $table->string('nama_subkategori');
             $table->tinyInteger('status_subkategori',0)->default('1')->unsigned();  
-
-            $table->timestamps();
         });
     }
 
