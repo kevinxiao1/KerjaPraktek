@@ -36,7 +36,8 @@ class SubKategoriController extends Controller
     public function updateSubKategori(Request $request)
     {
         $daftarKategori = kategori::all();
-        $daftarSubKategori = subkategori::find($request->key);
+        $daftarSubKategori = subkategori::select()->where('id_subkategori',$request->key)->first();
+        // dd($daftarSubKategori);
         return view('Content.Admin.MasterSubKategori.updateSubKategori',
             [
                 'daftarSubKategori' => $daftarSubKategori,

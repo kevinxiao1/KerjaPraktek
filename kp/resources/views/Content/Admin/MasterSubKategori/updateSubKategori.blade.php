@@ -14,7 +14,7 @@
               <label for="kategori">Kategori Barang</label>
               <select class="form-control" name="kategori">
                 @foreach ($daftarKategori as $item)
-                  @if ($item['id_kategori'] == $item->Subkategori['id_kategori'])
+                  @if ($item['id_kategori'] == $daftarSubKategori['id_kategori'])
                     <option selected value="{{ $item["id_kategori"] }}">{{ $item["nama_kategori"] }}</option>
                   @else
                     <option value="{{ $item["id_kategori"] }}">{{ $item["nama_kategori"] }}</option>
