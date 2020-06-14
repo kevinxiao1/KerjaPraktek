@@ -157,13 +157,13 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="pages/charts/chartjs.html" class="nav-link">
+                                    <a href="/admin/viewKonten" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Lihat List Konten</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/charts/flot.html" class="nav-link">
+                                    <a href="/admin/createKonten" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Tambah Konten Baru</p>
                                     </a>

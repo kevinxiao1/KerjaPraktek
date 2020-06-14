@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Model\barang;
 use App\Model\kategori;
+use App\Model\konten;
 use App\Model\subkategori;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -56,6 +57,20 @@ class AdminController extends Controller
         }
         
     }
+
+    public function viewKonten(Request $request)
+    {
+        if (Session::has("username")) {
+            $daftarKonten = konten::all();
+            return view('Content.Admin.MasterKonten.viewKonten',
+                [
+                    'daftarKonten' => $daftarKonten,
+                ]
+            );
+        }
+        
+    }
+
     public function Logout()
     {
         Session::forget('username');

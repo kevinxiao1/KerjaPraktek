@@ -66,4 +66,17 @@ Route::group(['prefix'=>'admin'], function() {
 // delete
     Route::get('/doDeleteSubKategori','SubKategoriController@doDeleteSubKategori')->name('doDeleteSubKategori');
     Route::get('/undoDeleteSubKategori','SubKategoriController@undoDeleteSubKategori')->name('undoDeleteSubKategori');
+
+    //Konten
+    // view
+    Route::get('/viewKonten','AdminController@viewKonten')->name('viewKonten');
+    // insert
+    Route::get('/createKonten','KontenController@createKonten')->name('createKonten');
+    Route::get('/doCreateKonten','KontenController@doCreateKonten')->name('doCreateKonten');
+    // update
+    Route::get('/updateKonten','KontenController@updateKonten')->name('updateKonten');
+    Route::get('/doUpdateKonten','KontenController@doUpdateKonten')->name('doUpdateKonten');
+    // delete
+    Route::get('/doDeleteKonten','KontenController@doDeleteKonten')->name('doDeleteKonten');
+    Route::get('/undoDeleteKonten','KontenController@undoDeleteKonten')->name('undoDeleteKonten');
 });
